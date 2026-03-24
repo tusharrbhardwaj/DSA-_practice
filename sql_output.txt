@@ -1,0 +1,2728 @@
+Last login: Fri Dec  5 19:45:13 on ttys000
+(base) tushar@Mac ~ % cd Documents 
+(base) tushar@Mac Documents % cd GitHub 
+(base) tushar@Mac GitHub % git clone git@github.com:tusharrbhardwaj/DSA-_practice.git
+Cloning into 'DSA-_practice'...
+warning: You appear to have cloned an empty repository.
+(base) tushar@Mac GitHub % cd DSA-_practice 
+(base) tushar@Mac DSA-_practice % code .
+(base) tushar@Mac DSA-_practice %       
+(base) tushar@Mac DSA-_practice % 
+(base) tushar@Mac DSA-_practice % cd ~
+(base) tushar@Mac ~ % mysql -u root - p Tush@rr1234
+mysql  Ver 14.14 Distrib 5.7.24, for osx11.1 (x86_64) using  EditLine wrapper
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Usage: mysql [OPTIONS] [database]
+  -?, --help          Display this help and exit.
+  -I, --help          Synonym for -?
+  --auto-rehash       Enable automatic rehashing. One doesn't need to use
+                      'rehash' to get table and field completion, but startup
+                      and reconnecting may take a longer time. Disable with
+                      --disable-auto-rehash.
+                      (Defaults to on; use --skip-auto-rehash to disable.)
+  -A, --no-auto-rehash 
+                      No automatic rehashing. One has to use 'rehash' to get
+                      table and field completion. This gives a quicker start of
+                      mysql and disables rehashing on reconnect.
+  --auto-vertical-output 
+                      Automatically switch to vertical output mode if the
+                      result is wider than the terminal width.
+  -B, --batch         Don't use history file. Disable interactive behavior.
+                      (Enables --silent.)
+  --bind-address=name IP address to bind to.
+  --binary-as-hex     Print binary data as hex
+  --character-sets-dir=name 
+                      Directory for character set files.
+  --column-type-info  Display column type information.
+  -c, --comments      Preserve comments. Send comments to the server. The
+                      default is --skip-comments (discard comments), enable
+                      with --comments.
+  -C, --compress      Use compression in server/client protocol.
+  -#, --debug[=#]     This is a non-debug version. Catch this and exit.
+  --debug-check       This is a non-debug version. Catch this and exit.
+  -T, --debug-info    This is a non-debug version. Catch this and exit.
+  -D, --database=name Database to use.
+  --default-character-set=name 
+                      Set the default character set.
+  --delimiter=name    Delimiter to be used.
+  --enable-cleartext-plugin 
+                      Enable/disable the clear text authentication plugin.
+  -e, --execute=name  Execute command and quit. (Disables --force and history
+                      file.)
+  -E, --vertical      Print the output of a query (rows) vertically.
+  -f, --force         Continue even if we get an SQL error.
+  --histignore=name   A colon-separated list of patterns to keep statements
+                      from getting logged into syslog and mysql history.
+  -G, --named-commands 
+                      Enable named commands. Named commands mean this program's
+                      internal commands; see mysql> help . When enabled, the
+                      named commands can be used from any line of the query,
+                      otherwise only from the first line, before an enter.
+                      Disable with --disable-named-commands. This option is
+                      disabled by default.
+  -i, --ignore-spaces Ignore space after function names.
+  --init-command=name SQL Command to execute when connecting to MySQL server.
+                      Will automatically be re-executed when reconnecting.
+  --local-infile      Enable/disable LOAD DATA LOCAL INFILE.
+  -b, --no-beep       Turn off beep on error.
+  -h, --host=name     Connect to host.
+  -H, --html          Produce HTML output.
+  -X, --xml           Produce XML output.
+  --line-numbers      Write line numbers for errors.
+                      (Defaults to on; use --skip-line-numbers to disable.)
+  -L, --skip-line-numbers 
+                      Don't write line number for errors.
+  -n, --unbuffered    Flush buffer after each query.
+  --column-names      Write column names in results.
+                      (Defaults to on; use --skip-column-names to disable.)
+  -N, --skip-column-names 
+                      Don't write column names in results.
+  --sigint-ignore     Ignore SIGINT (CTRL-C).
+  -o, --one-database  Ignore statements except those that occur while the
+                      default database is the one named at the command line.
+  --pager[=name]      Pager to use to display results. If you don't supply an
+                      option, the default pager is taken from your ENV variable
+                      PAGER. Valid pagers are less, more, cat [> filename],
+                      etc. See interactive help (\h) also. This option does not
+                      work in batch mode. Disable with --disable-pager. This
+                      option is disabled by default.
+  -p, --password[=name] 
+                      Password to use when connecting to server. If password is
+                      not given it's asked from the tty.
+  -P, --port=#        Port number to use for connection or 0 for default to, in
+                      order of preference, my.cnf, $MYSQL_TCP_PORT,
+                      /etc/services, built-in default (3306).
+  --prompt=name       Set the mysql prompt to this value.
+  --protocol=name     The protocol to use for connection (tcp, socket, pipe,
+                      memory).
+  -q, --quick         Don't cache result, print it row by row. This may slow
+                      down the server if the output is suspended. Doesn't use
+                      history file.
+  -r, --raw           Write fields without conversion. Used with --batch.
+  --reconnect         Reconnect if the connection is lost. Disable with
+                      --disable-reconnect. This option is enabled by default.
+                      (Defaults to on; use --skip-reconnect to disable.)
+  -s, --silent        Be more silent. Print results with a tab as separator,
+                      each row on new line.
+  -S, --socket=name   The socket file to use for connection.
+  --ssl-mode=name     SSL connection mode.
+  --ssl               Deprecated. Use --ssl-mode instead.
+                      (Defaults to on; use --skip-ssl to disable.)
+  --ssl-verify-server-cert 
+                      Deprecated. Use --ssl-mode=VERIFY_IDENTITY instead.
+  --ssl-ca=name       CA file in PEM format.
+  --ssl-capath=name   CA directory.
+  --ssl-cert=name     X509 cert in PEM format.
+  --ssl-cipher=name   SSL cipher to use.
+  --ssl-key=name      X509 key in PEM format.
+  --ssl-crl=name      Certificate revocation list.
+  --ssl-crlpath=name  Certificate revocation list path.
+  --tls-version=name  TLS version to use, permitted values are: TLSv1, TLSv1.1,
+                      TLSv1.2
+  --server-public-key-path=name 
+                      File path to the server public RSA key in PEM format.
+  --get-server-public-key 
+                      Get server public key
+  -t, --table         Output in table format.
+  --tee=name          Append everything into outfile. See interactive help (\h)
+                      also. Does not work in batch mode. Disable with
+                      --disable-tee. This option is disabled by default.
+  -u, --user=name     User for login if not current user.
+  -U, --safe-updates  Only allow UPDATE and DELETE that uses keys.
+  -U, --i-am-a-dummy  Synonym for option --safe-updates, -U.
+  -v, --verbose       Write more. (-v -v -v gives the table output format).
+  -V, --version       Output version information and exit.
+  -w, --wait          Wait and retry if connection is down.
+  --connect-timeout=# Number of seconds before connection timeout.
+  --max-allowed-packet=# 
+                      The maximum packet length to send to or receive from
+                      server.
+  --net-buffer-length=# 
+                      The buffer size for TCP/IP and socket communication.
+  --select-limit=#    Automatic limit for SELECT when using --safe-updates.
+  --max-join-size=#   Automatic limit for rows in a join when using
+                      --safe-updates.
+  --secure-auth       Refuse client connecting to server if it uses old
+                      (pre-4.1.1) protocol. Deprecated. Always TRUE
+  --server-arg=name   Send embedded server this as a parameter.
+  --show-warnings     Show warnings after every statement.
+  -j, --syslog        Log filtered interactive commands to syslog. Filtering of
+                      commands depends on the patterns supplied via histignore
+                      option besides the default patterns.
+  --plugin-dir=name   Directory for client-side plugins.
+  --default-auth=name Default authentication client-side plugin to use.
+  --binary-mode       By default, ASCII '\0' is disallowed and '\r\n' is
+                      translated to '\n'. This switch turns off both features,
+                      and also turns off parsing of all clientcommands except
+                      \C and DELIMITER, in non-interactive mode (for input
+                      piped to mysql or loaded using the 'source' command).
+                      This is necessary when processing output from mysqlbinlog
+                      that may contain blobs.
+  --connect-expired-password 
+                      Notify the server that this client is prepared to handle
+                      expired password sandbox mode.
+
+Default options are read from the following files in the given order:
+/etc/my.cnf /etc/mysql/my.cnf /opt/anaconda3/etc/my.cnf ~/.my.cnf 
+The following groups are read: mysql client
+The following options may be given as the first argument:
+--print-defaults        Print the program argument list and exit.
+--no-defaults           Don't read default options from any option file,
+                        except for login file.
+--defaults-file=#       Only read default options from the given file #.
+--defaults-extra-file=# Read this file after the global files are read.
+--defaults-group-suffix=#
+                        Also read groups with concat(group, suffix)
+--login-path=#          Read this path from the login file.
+
+Variables (--variable-name=value)
+and boolean options {FALSE|TRUE}  Value (after reading options)
+--------------------------------- ----------------------------------------
+auto-rehash                       TRUE
+auto-vertical-output              FALSE
+bind-address                      (No default value)
+binary-as-hex                     FALSE
+character-sets-dir                (No default value)
+column-type-info                  FALSE
+comments                          FALSE
+compress                          FALSE
+database                          (No default value)
+default-character-set             auto
+delimiter                         ;
+enable-cleartext-plugin           FALSE
+vertical                          FALSE
+force                             FALSE
+histignore                        (No default value)
+named-commands                    FALSE
+ignore-spaces                     FALSE
+init-command                      (No default value)
+local-infile                      FALSE
+no-beep                           FALSE
+host                              (No default value)
+html                              FALSE
+xml                               FALSE
+line-numbers                      TRUE
+unbuffered                        FALSE
+column-names                      TRUE
+sigint-ignore                     FALSE
+port                              0
+prompt                            mysql> 
+quick                             FALSE
+raw                               FALSE
+reconnect                         TRUE
+socket                            (No default value)
+ssl                               TRUE
+ssl-verify-server-cert            FALSE
+ssl-ca                            (No default value)
+ssl-capath                        (No default value)
+ssl-cert                          (No default value)
+ssl-cipher                        (No default value)
+ssl-key                           (No default value)
+ssl-crl                           (No default value)
+ssl-crlpath                       (No default value)
+tls-version                       (No default value)
+server-public-key-path            (No default value)
+get-server-public-key             FALSE
+table                             FALSE
+user                              root
+safe-updates                      FALSE
+i-am-a-dummy                      FALSE
+connect-timeout                   0
+max-allowed-packet                16777216
+net-buffer-length                 16384
+select-limit                      1000
+max-join-size                     1000000
+secure-auth                       TRUE
+show-warnings                     FALSE
+plugin-dir                        (No default value)
+default-auth                      (No default value)
+binary-mode                       FALSE
+connect-expired-password          FALSE
+(base) tushar@Mac ~ % mysql -u root -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+(base) tushar@Mac ~ % mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 9.5.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE DATABASE Gisma_SQL;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> USE Gisma_SQL;
+Database changed
+mysql> CREATE TABLE user(
+    -> id INT auto_increment PRIMARY KEY,
+    -> name VARCHAR(100) NOT NULL,
+    -> email_id VARCHAR(100) UNIQUE NOT NULL,
+    -> gender ENUM('Male','Female', 'other'),
+    -> date_of_birth DATE,
+    -> created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> INSERT INTO user(1, 'Tushar', 'tusharrbhardwaj@gmail.com', 'Male', 22-09-2007);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1, 'Tushar', 'tusharrbhardwaj@gmail.com', 'Male', 22-09-2007)' at line 1
+mysql> INSERT INTO user VALUES(1, 'Tushar', 'tusharrbhardwaj@gmail.com', 'Male', 22-09-2007);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO user VALUES(1, 'Tushar', 'tusharrbhardwaj@gmail.com', 'Male', 22-09-2007,CURRENT_TIMESTAMP);
+ERROR 1292 (22007): Incorrect date value: '-1994' for column 'date_of_birth' at row 1
+mysql> INSERT INTO user VALUES(1, 'Tushar', 'tusharrbhardwaj@gmail.com', 'Male', 22/09/2007,CURRENT_TIMESTAMP);
+ERROR 1292 (22007): Incorrect date value: '0.00121794' for column 'date_of_birth' at row 1
+mysql> INSERT INTO user VALUES(1, 'Tushar', 'tusharrbhardwaj@gmail.com', 'Male', 2007-09-22, CURRENT_TIMESTAMP);
+ERROR 1292 (22007): Incorrect date value: '1976' for column 'date_of_birth' at row 1
+mysql> INSERT INTO user VALUES(1, 'Tushar', 'tusharrbhardwaj@gmail.com', 'Male', '2007-09-22', CURRENT_TIMESTAMP);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM user
+    -> ;
++----+--------+---------------------------+--------+---------------+---------------------+
+| id | name   | email_id                  | gender | date_of_birth | created_at          |
++----+--------+---------------------------+--------+---------------+---------------------+
+|  1 | Tushar | tusharrbhardwaj@gmail.com | Male   | 2007-09-22    | 2025-12-15 16:33:19 |
++----+--------+---------------------------+--------+---------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO user (name, email_id, gender, date_of_birth)  VALUES('Siddharth Chaudhary', 'amarakiyoplay@gmail.com', 'Male', '2005-04-16', CURRENT_TIMESTAMP);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO user (name, email_id, gender, date_of_birth)  VALUES('Siddharth Chaudhary', 'amarakiyoplay@gmail.com', 'Male', '2005-04-16');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM user;
++----+---------------------+---------------------------+--------+---------------+---------------------+
+| id | name                | email_id                  | gender | date_of_birth | created_at          |
++----+---------------------+---------------------------+--------+---------------+---------------------+
+|  1 | Tushar              | tusharrbhardwaj@gmail.com | Male   | 2007-09-22    | 2025-12-15 16:33:19 |
+|  2 | Siddharth Chaudhary | amarakiyoplay@gmail.com   | Male   | 2005-04-16    | 2025-12-15 21:07:00 |
++----+---------------------+---------------------------+--------+---------------+---------------------+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO user (name, email_id, gender, date_of_birth) VALUES
+    -> ('Aarav Sharma', 'aarav.sharma@gmail.com', 'Male', '2004-01-15'),
+    -> ('Ananya Verma', 'ananya.verma@gmail.com', 'Female', '2005-03-22'),
+    -> ('Rohan Gupta', 'rohan.gupta@gmail.com', 'Male', '2003-07-11'),
+    -> ('Priya Mehta', 'priya.mehta@gmail.com', 'Female', '2004-09-05'),
+    -> ('Kunal Singh', 'kunal.singh@gmail.com', 'Male', '2005-12-18'),
+    -> ('Neha Kapoor', 'neha.kapoor@gmail.com', 'Female', '2004-02-09'),
+    -> ('Aditya Malhotra', 'aditya.malhotra@gmail.com', 'Male', '2003-11-30'),
+    -> ('Simran Kaur', 'simran.kaur@gmail.com', 'Female', '2005-06-14'),
+    -> ('Rahul Jain', 'rahul.jain@gmail.com', 'Male', '2004-08-21'),
+    -> ('Pooja Agarwal', 'pooja.agarwal@gmail.com', 'Female', '2005-05-10'),
+    -> 
+    -> ('Vikas Yadav', 'vikas.yadav@gmail.com', 'Male', '2003-10-02'),
+    -> ('Sneha Nair', 'sneha.nair@gmail.com', 'Female', '2004-04-27'),
+    -> ('Amit Patel', 'amit.patel@gmail.com', 'Male', '2005-01-19'),
+    -> ('Kritika Arora', 'kritika.arora@gmail.com', 'Female', '2003-06-03'),
+    -> ('Suresh Reddy', 'suresh.reddy@gmail.com', 'Male', '2004-12-25'),
+    -> ('Nisha Joshi', 'nisha.joshi@gmail.com', 'Female', '2005-09-09'),
+    -> ('Arjun Iyer', 'arjun.iyer@gmail.com', 'Male', '2003-02-14'),
+    -> ('Ritika Bansal', 'ritika.bansal@gmail.com', 'Female', '2004-07-29'),
+    -> ('Manish Chawla', 'manish.chawla@gmail.com', 'Male', '2005-11-06'),
+    -> ('Shreya Sengupta', 'shreya.s@gmail.com', 'Female', '2003-08-17'),
+    -> 
+    -> ('Nikhil Saxena', 'nikhil.saxena@gmail.com', 'Male', '2004-01-08'),
+    -> ('Aishwarya Pillai', 'aishwarya.p@gmail.com', 'Female', '2005-03-31'),
+    -> ('Deepak Mishra', 'deepak.mishra@gmail.com', 'Male', '2003-05-24'),
+    -> ('Isha Khanna', 'isha.khanna@gmail.com', 'Female', '2004-10-12'),
+    -> ('Sanjay Kulkarni', 'sanjay.k@gmail.com', 'Male', '2005-07-07'),
+    -> ('Rhea Dutta', 'rhea.dutta@gmail.com', 'Female', '2003-09-20'),
+    -> ('Mohit Bhatia', 'mohit.bhatia@gmail.com', 'Male', '2004-06-01'),
+    -> ('Kavya Menon', 'kavya.menon@gmail.com', 'Female', '2005-02-26'),
+    -> ('Yash Thakur', 'yash.thakur@gmail.com', 'Male', '2003-12-04'),
+    -> ('Mehul Shah', 'mehul.shah@gmail.com', 'Male', '2004-08-15'),
+    -> 
+    -> ('Tanvi Kulkarni', 'tanvi.k@gmail.com', 'Female', '2005-11-28'),
+    -> ('Akash Pandey', 'akash.pandey@gmail.com', 'Male', '2003-04-19'),
+    -> ('Ritu Malhotra', 'ritu.m@gmail.com', 'Female', '2004-01-30'),
+    -> ('Varun Arora', 'varun.arora@gmail.com', 'Male', '2005-06-22'),
+    -> ('Sonal Desai', 'sonal.desai@gmail.com', 'Female', '2003-07-13'),
+    -> ('Harsh Vardhan', 'harsh.v@gmail.com', 'Male', '2004-09-02'),
+    -> ('Pallavi Joshi', 'pallavi.j@gmail.com', 'Female', '2005-05-16'),
+    -> ('Karan Oberoi', 'karan.oberoi@gmail.com', 'Male', '2003-10-09'),
+    -> ('Mitali Roy', 'mitali.roy@gmail.com', 'Female', '2004-02-18'),
+    -> ('Rakesh Sinha', 'rakesh.sinha@gmail.com', 'Male', '2005-12-01'),
+    -> 
+    -> ('Siddharth Chaudhary', 'amarakiyoplay@gmail.com', 'Male', '2005-04-16'),
+    -> ('Ankit Verma', 'ankit.verma@gmail.com', 'Male', '2004-06-25'),
+    -> ('Divya Bhatt', 'divya.bhatt@gmail.com', 'Female', '2003-03-08'),
+    -> ('Rohini Rao', 'rohini.rao@gmail.com', 'Female', '2005-08-19'),
+    -> ('Keshav Tiwari', 'keshav.tiwari@gmail.com', 'Male', '2004-11-14');
+ERROR 1062 (23000): Duplicate entry 'amarakiyoplay@gmail.com' for key 'user.email_id'
+mysql> INSERT INTO user (name, email_id, gender, date_of_birth) VALUES
+    -> ('Aarav Sharma', 'aarav.sharma@gmail.com', 'Male', '2004-01-15'),
+    -> ('Ananya Verma', 'ananya.verma@gmail.com', 'Female', '2005-03-22'),
+    -> ('Rohan Gupta', 'rohan.gupta@gmail.com', 'Male', '2003-07-11'),
+    -> ('Priya Mehta', 'priya.mehta@gmail.com', 'Female', '2004-09-05'),
+    -> ('Kunal Singh', 'kunal.singh@gmail.com', 'Male', '2005-12-18'),
+    -> ('Neha Kapoor', 'neha.kapoor@gmail.com', 'Female', '2004-02-09'),
+    -> ('Aditya Malhotra', 'aditya.malhotra@gmail.com', 'Male', '2003-11-30'),
+    -> ('Simran Kaur', 'simran.kaur@gmail.com', 'Female', '2005-06-14'),
+    -> ('Rahul Jain', 'rahul.jain@gmail.com', 'Male', '2004-08-21'),
+    -> ('Pooja Agarwal', 'pooja.agarwal@gmail.com', 'Female', '2005-05-10'),
+    -> 
+    -> ('Vikas Yadav', 'vikas.yadav@gmail.com', 'Male', '2003-10-02'),
+    -> ('Sneha Nair', 'sneha.nair@gmail.com', 'Female', '2004-04-27'),
+    -> ('Amit Patel', 'amit.patel@gmail.com', 'Male', '2005-01-19'),
+    -> ('Kritika Arora', 'kritika.arora@gmail.com', 'Female', '2003-06-03'),
+    -> ('Suresh Reddy', 'suresh.reddy@gmail.com', 'Male', '2004-12-25'),
+    -> ('Nisha Joshi', 'nisha.joshi@gmail.com', 'Female', '2005-09-09'),
+    -> ('Arjun Iyer', 'arjun.iyer@gmail.com', 'Male', '2003-02-14'),
+    -> ('Ritika Bansal', 'ritika.bansal@gmail.com', 'Female', '2004-07-29'),
+    -> ('Manish Chawla', 'manish.chawla@gmail.com', 'Male', '2005-11-06'),
+    -> ('Shreya Sengupta', 'shreya.s@gmail.com', 'Female', '2003-08-17'),
+    -> 
+    -> ('Nikhil Saxena', 'nikhil.saxena@gmail.com', 'Male', '2004-01-08'),
+    -> ('Aishwarya Pillai', 'aishwarya.p@gmail.com', 'Female', '2005-03-31'),
+    -> ('Deepak Mishra', 'deepak.mishra@gmail.com', 'Male', '2003-05-24'),
+    -> ('Isha Khanna', 'isha.khanna@gmail.com', 'Female', '2004-10-12'),
+    -> ('Sanjay Kulkarni', 'sanjay.k@gmail.com', 'Male', '2005-07-07'),
+    -> ('Rhea Dutta', 'rhea.dutta@gmail.com', 'Female', '2003-09-20'),
+    -> ('Mohit Bhatia', 'mohit.bhatia@gmail.com', 'Male', '2004-06-01'),
+    -> ('Kavya Menon', 'kavya.menon@gmail.com', 'Female', '2005-02-26'),
+    -> ('Yash Thakur', 'yash.thakur@gmail.com', 'Male', '2003-12-04'),
+    -> ('Mehul Shah', 'mehul.shah@gmail.com', 'Male', '2004-08-15'),
+    -> 
+    -> ('Tanvi Kulkarni', 'tanvi.k@gmail.com', 'Female', '2005-11-28'),
+    -> ('Akash Pandey', 'akash.pandey@gmail.com', 'Male', '2003-04-19'),
+    -> ('Ritu Malhotra', 'ritu.m@gmail.com', 'Female', '2004-01-30'),
+    -> ('Varun Arora', 'varun.arora@gmail.com', 'Male', '2005-06-22'),
+    -> ('Sonal Desai', 'sonal.desai@gmail.com', 'Female', '2003-07-13'),
+    -> ('Harsh Vardhan', 'harsh.v@gmail.com', 'Male', '2004-09-02'),
+    -> ('Pallavi Joshi', 'pallavi.j@gmail.com', 'Female', '2005-05-16'),
+    -> ('Karan Oberoi', 'karan.oberoi@gmail.com', 'Male', '2003-10-09'),
+    -> ('Mitali Roy', 'mitali.roy@gmail.com', 'Female', '2004-02-18'),
+    -> ('Rakesh Sinha', 'rakesh.sinha@gmail.com', 'Male', '2005-12-01'),
+    -> 
+    -> ('Siddharth Chaudhary', 'amarakiyoplay@gmail.com', 'Male', '2005-04-16'),
+    -> ('Ankit Verma', 'ankit.verma@gmail.com', 'Male', '2004-06-25'),
+    -> ('Divya Bhatt', 'divya.bhatt@gmail.com', 'Female', '2003-03-08'),
+    -> ('Rohini Rao', 'rohini.rao@gmail.com', 'Female', '2005-08-19'),
+    -> ('Keshav Tiwari', 'keshav.tiwari@gmail.com', 'Male', '2004-11-14');
+ERROR 1062 (23000): Duplicate entry 'amarakiyoplay@gmail.com' for key 'user.email_id'
+mysql> INSERT INTO user (name, email_id, gender, date_of_birth) VALUES
+    -> ('Aarav Sharma', 'aarav.sharma@gmail.com', 'Male', '2004-01-15'),
+    -> ('Ananya Verma', 'ananya.verma@gmail.com', 'Female', '2005-03-22'),
+    -> ('Rohan Gupta', 'rohan.gupta@gmail.com', 'Male', '2003-07-11'),
+    -> ('Priya Mehta', 'priya.mehta@gmail.com', 'Female', '2004-09-05'),
+    -> ('Kunal Singh', 'kunal.singh@gmail.com', 'Male', '2005-12-18'),
+    -> ('Neha Kapoor', 'neha.kapoor@gmail.com', 'Female', '2004-02-09'),
+    -> ('Aditya Malhotra', 'aditya.malhotra@gmail.com', 'Male', '2003-11-30'),
+    -> ('Simran Kaur', 'simran.kaur@gmail.com', 'Female', '2005-06-14'),
+    -> ('Rahul Jain', 'rahul.jain@gmail.com', 'Male', '2004-08-21'),
+    -> ('Pooja Agarwal', 'pooja.agarwal@gmail.com', 'Female', '2005-05-10'),
+    -> 
+    -> ('Vikas Yadav', 'vikas.yadav@gmail.com', 'Male', '2003-10-02'),
+    -> ('Sneha Nair', 'sneha.nair@gmail.com', 'Female', '2004-04-27'),
+    -> ('Amit Patel', 'amit.patel@gmail.com', 'Male', '2005-01-19'),
+    -> ('Kritika Arora', 'kritika.arora@gmail.com', 'Female', '2003-06-03'),
+    -> ('Suresh Reddy', 'suresh.reddy@gmail.com', 'Male', '2004-12-25'),
+    -> ('Nisha Joshi', 'nisha.joshi@gmail.com', 'Female', '2005-09-09'),
+    -> ('Arjun Iyer', 'arjun.iyer@gmail.com', 'Male', '2003-02-14'),
+    -> ('Ritika Bansal', 'ritika.bansal@gmail.com', 'Female', '2004-07-29'),
+    -> ('Manish Chawla', 'manish.chawla@gmail.com', 'Male', '2005-11-06'),
+    -> ('Shreya Sengupta', 'shreya.s@gmail.com', 'Female', '2003-08-17'),
+    -> 
+    -> ('Nikhil Saxena', 'nikhil.saxena@gmail.com', 'Male', '2004-01-08'),
+    -> ('Aishwarya Pillai', 'aishwarya.p@gmail.com', 'Female', '2005-03-31'),
+    -> ('Deepak Mishra', 'deepak.mishra@gmail.com', 'Male', '2003-05-24'),
+    -> ('Isha Khanna', 'isha.khanna@gmail.com', 'Female', '2004-10-12'),
+    -> ('Sanjay Kulkarni', 'sanjay.k@gmail.com', 'Male', '2005-07-07'),
+    -> ('Rhea Dutta', 'rhea.dutta@gmail.com', 'Female', '2003-09-20'),
+    -> ('Mohit Bhatia', 'mohit.bhatia@gmail.com', 'Male', '2004-06-01'),
+    -> ('Kavya Menon', 'kavya.menon@gmail.com', 'Female', '2005-02-26'),
+    -> ('Yash Thakur', 'yash.thakur@gmail.com', 'Male', '2003-12-04'),
+    -> ('Mehul Shah', 'mehul.shah@gmail.com', 'Male', '2004-08-15'),
+    -> 
+    -> ('Tanvi Kulkarni', 'tanvi.k@gmail.com', 'Female', '2005-11-28'),
+    -> ('Akash Pandey', 'akash.pandey@gmail.com', 'Male', '2003-04-19'),
+    -> ('Ritu Malhotra', 'ritu.m@gmail.com', 'Female', '2004-01-30'),
+    -> ('Varun Arora', 'varun.arora@gmail.com', 'Male', '2005-06-22'),
+    -> ('Sonal Desai', 'sonal.desai@gmail.com', 'Female', '2003-07-13'),
+    -> ('Harsh Vardhan', 'harsh.v@gmail.com', 'Male', '2004-09-02'),
+    -> ('Pallavi Joshi', 'pallavi.j@gmail.com', 'Female', '2005-05-16'),
+    -> ('Karan Oberoi', 'karan.oberoi@gmail.com', 'Male', '2003-10-09'),
+    -> ('Mitali Roy', 'mitali.roy@gmail.com', 'Female', '2004-02-18'),
+    -> ('Rakesh Sinha', 'rakesh.sinha@gmail.com', 'Male', '2005-12-01'),
+    -> 
+    -> ('Ankit Verma', 'ankit.verma@gmail.com', 'Male', '2004-06-25'),
+    -> ('Divya Bhatt', 'divya.bhatt@gmail.com', 'Female', '2003-03-08'),
+    -> ('Rohini Rao', 'rohini.rao@gmail.com', 'Female', '2005-08-19'),
+    -> ('Keshav Tiwari', 'keshav.tiwari@gmail.com', 'Male', '2004-11-14');
+Query OK, 44 rows affected (0.01 sec)
+Records: 44  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM user OFFSET 40;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '40' at line 1
+mysql> SELECT * FROM user LIMIT 10 OFFSET 40
+    -> ;
++-----+---------------+-------------------------+--------+---------------+---------------------+
+| id  | name          | email_id                | gender | date_of_birth | created_at          |
++-----+---------------+-------------------------+--------+---------------+---------------------+
+| 131 | Mitali Roy    | mitali.roy@gmail.com    | Female | 2004-02-18    | 2025-12-15 21:14:33 |
+| 132 | Rakesh Sinha  | rakesh.sinha@gmail.com  | Male   | 2005-12-01    | 2025-12-15 21:14:33 |
+| 133 | Ankit Verma   | ankit.verma@gmail.com   | Male   | 2004-06-25    | 2025-12-15 21:14:33 |
+| 134 | Divya Bhatt   | divya.bhatt@gmail.com   | Female | 2003-03-08    | 2025-12-15 21:14:33 |
+| 135 | Rohini Rao    | rohini.rao@gmail.com    | Female | 2005-08-19    | 2025-12-15 21:14:33 |
+| 136 | Keshav Tiwari | keshav.tiwari@gmail.com | Male   | 2004-11-14    | 2025-12-15 21:14:33 |
++-----+---------------+-------------------------+--------+---------------+---------------------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT * FROM users
+    -> ;
+ERROR 1146 (42S02): Table 'gisma_sql.users' doesn't exist
+mysql> SELECT * FROM user;
++-----+---------------------+---------------------------+--------+---------------+---------------------+
+| id  | name                | email_id                  | gender | date_of_birth | created_at          |
++-----+---------------------+---------------------------+--------+---------------+---------------------+
+|   1 | Tushar              | tusharrbhardwaj@gmail.com | Male   | 2007-09-22    | 2025-12-15 16:33:19 |
+|   2 | Siddharth Chaudhary | amarakiyoplay@gmail.com   | Male   | 2005-04-16    | 2025-12-15 21:07:00 |
+|  93 | Aarav Sharma        | aarav.sharma@gmail.com    | Male   | 2004-01-15    | 2025-12-15 21:14:33 |
+|  94 | Ananya Verma        | ananya.verma@gmail.com    | Female | 2005-03-22    | 2025-12-15 21:14:33 |
+|  95 | Rohan Gupta         | rohan.gupta@gmail.com     | Male   | 2003-07-11    | 2025-12-15 21:14:33 |
+|  96 | Priya Mehta         | priya.mehta@gmail.com     | Female | 2004-09-05    | 2025-12-15 21:14:33 |
+|  97 | Kunal Singh         | kunal.singh@gmail.com     | Male   | 2005-12-18    | 2025-12-15 21:14:33 |
+|  98 | Neha Kapoor         | neha.kapoor@gmail.com     | Female | 2004-02-09    | 2025-12-15 21:14:33 |
+|  99 | Aditya Malhotra     | aditya.malhotra@gmail.com | Male   | 2003-11-30    | 2025-12-15 21:14:33 |
+| 100 | Simran Kaur         | simran.kaur@gmail.com     | Female | 2005-06-14    | 2025-12-15 21:14:33 |
+| 101 | Rahul Jain          | rahul.jain@gmail.com      | Male   | 2004-08-21    | 2025-12-15 21:14:33 |
+| 102 | Pooja Agarwal       | pooja.agarwal@gmail.com   | Female | 2005-05-10    | 2025-12-15 21:14:33 |
+| 103 | Vikas Yadav         | vikas.yadav@gmail.com     | Male   | 2003-10-02    | 2025-12-15 21:14:33 |
+| 104 | Sneha Nair          | sneha.nair@gmail.com      | Female | 2004-04-27    | 2025-12-15 21:14:33 |
+| 105 | Amit Patel          | amit.patel@gmail.com      | Male   | 2005-01-19    | 2025-12-15 21:14:33 |
+| 106 | Kritika Arora       | kritika.arora@gmail.com   | Female | 2003-06-03    | 2025-12-15 21:14:33 |
+| 107 | Suresh Reddy        | suresh.reddy@gmail.com    | Male   | 2004-12-25    | 2025-12-15 21:14:33 |
+| 108 | Nisha Joshi         | nisha.joshi@gmail.com     | Female | 2005-09-09    | 2025-12-15 21:14:33 |
+| 109 | Arjun Iyer          | arjun.iyer@gmail.com      | Male   | 2003-02-14    | 2025-12-15 21:14:33 |
+| 110 | Ritika Bansal       | ritika.bansal@gmail.com   | Female | 2004-07-29    | 2025-12-15 21:14:33 |
+| 111 | Manish Chawla       | manish.chawla@gmail.com   | Male   | 2005-11-06    | 2025-12-15 21:14:33 |
+| 112 | Shreya Sengupta     | shreya.s@gmail.com        | Female | 2003-08-17    | 2025-12-15 21:14:33 |
+| 113 | Nikhil Saxena       | nikhil.saxena@gmail.com   | Male   | 2004-01-08    | 2025-12-15 21:14:33 |
+| 114 | Aishwarya Pillai    | aishwarya.p@gmail.com     | Female | 2005-03-31    | 2025-12-15 21:14:33 |
+| 115 | Deepak Mishra       | deepak.mishra@gmail.com   | Male   | 2003-05-24    | 2025-12-15 21:14:33 |
+| 116 | Isha Khanna         | isha.khanna@gmail.com     | Female | 2004-10-12    | 2025-12-15 21:14:33 |
+| 117 | Sanjay Kulkarni     | sanjay.k@gmail.com        | Male   | 2005-07-07    | 2025-12-15 21:14:33 |
+| 118 | Rhea Dutta          | rhea.dutta@gmail.com      | Female | 2003-09-20    | 2025-12-15 21:14:33 |
+| 119 | Mohit Bhatia        | mohit.bhatia@gmail.com    | Male   | 2004-06-01    | 2025-12-15 21:14:33 |
+| 120 | Kavya Menon         | kavya.menon@gmail.com     | Female | 2005-02-26    | 2025-12-15 21:14:33 |
+| 121 | Yash Thakur         | yash.thakur@gmail.com     | Male   | 2003-12-04    | 2025-12-15 21:14:33 |
+| 122 | Mehul Shah          | mehul.shah@gmail.com      | Male   | 2004-08-15    | 2025-12-15 21:14:33 |
+| 123 | Tanvi Kulkarni      | tanvi.k@gmail.com         | Female | 2005-11-28    | 2025-12-15 21:14:33 |
+| 124 | Akash Pandey        | akash.pandey@gmail.com    | Male   | 2003-04-19    | 2025-12-15 21:14:33 |
+| 125 | Ritu Malhotra       | ritu.m@gmail.com          | Female | 2004-01-30    | 2025-12-15 21:14:33 |
+| 126 | Varun Arora         | varun.arora@gmail.com     | Male   | 2005-06-22    | 2025-12-15 21:14:33 |
+| 127 | Sonal Desai         | sonal.desai@gmail.com     | Female | 2003-07-13    | 2025-12-15 21:14:33 |
+| 128 | Harsh Vardhan       | harsh.v@gmail.com         | Male   | 2004-09-02    | 2025-12-15 21:14:33 |
+| 129 | Pallavi Joshi       | pallavi.j@gmail.com       | Female | 2005-05-16    | 2025-12-15 21:14:33 |
+| 130 | Karan Oberoi        | karan.oberoi@gmail.com    | Male   | 2003-10-09    | 2025-12-15 21:14:33 |
+| 131 | Mitali Roy          | mitali.roy@gmail.com      | Female | 2004-02-18    | 2025-12-15 21:14:33 |
+| 132 | Rakesh Sinha        | rakesh.sinha@gmail.com    | Male   | 2005-12-01    | 2025-12-15 21:14:33 |
+| 133 | Ankit Verma         | ankit.verma@gmail.com     | Male   | 2004-06-25    | 2025-12-15 21:14:33 |
+| 134 | Divya Bhatt         | divya.bhatt@gmail.com     | Female | 2003-03-08    | 2025-12-15 21:14:33 |
+| 135 | Rohini Rao          | rohini.rao@gmail.com      | Female | 2005-08-19    | 2025-12-15 21:14:33 |
+| 136 | Keshav Tiwari       | keshav.tiwari@gmail.com   | Male   | 2004-11-14    | 2025-12-15 21:14:33 |
++-----+---------------------+---------------------------+--------+---------------+---------------------+
+46 rows in set (0.00 sec)
+
+mysql> SELECT name, email_id FROM user WHERE name = 'Tushar Bhardwaj';
+Empty set (0.00 sec)
+
+mysql> SELECT name, email_id FROM user WHERE name = 'Tushar';
++--------+---------------------------+
+| name   | email_id                  |
++--------+---------------------------+
+| Tushar | tusharrbhardwaj@gmail.com |
++--------+---------------------------+
+1 row in set (0.00 sec)
+
+mysql> ALTER TABLE user ADD COLUMN is_active BOOLEAN;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE user ADD COLUMN is_active BOOLEAN DEFAULT TRUE;
+ERROR 1060 (42S21): Duplicate column name 'is_active'
+mysql> ALTER TABLE user MODIFY COLUMN is_active BOOLEAN DEFAULT TRUE;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM user;
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+| id  | name                | email_id                  | gender | date_of_birth | created_at          | is_active |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+|   1 | Tushar              | tusharrbhardwaj@gmail.com | Male   | 2007-09-22    | 2025-12-15 16:33:19 |      NULL |
+|   2 | Siddharth Chaudhary | amarakiyoplay@gmail.com   | Male   | 2005-04-16    | 2025-12-15 21:07:00 |      NULL |
+|  93 | Aarav Sharma        | aarav.sharma@gmail.com    | Male   | 2004-01-15    | 2025-12-15 21:14:33 |      NULL |
+|  94 | Ananya Verma        | ananya.verma@gmail.com    | Female | 2005-03-22    | 2025-12-15 21:14:33 |      NULL |
+|  95 | Rohan Gupta         | rohan.gupta@gmail.com     | Male   | 2003-07-11    | 2025-12-15 21:14:33 |      NULL |
+|  96 | Priya Mehta         | priya.mehta@gmail.com     | Female | 2004-09-05    | 2025-12-15 21:14:33 |      NULL |
+|  97 | Kunal Singh         | kunal.singh@gmail.com     | Male   | 2005-12-18    | 2025-12-15 21:14:33 |      NULL |
+|  98 | Neha Kapoor         | neha.kapoor@gmail.com     | Female | 2004-02-09    | 2025-12-15 21:14:33 |      NULL |
+|  99 | Aditya Malhotra     | aditya.malhotra@gmail.com | Male   | 2003-11-30    | 2025-12-15 21:14:33 |      NULL |
+| 100 | Simran Kaur         | simran.kaur@gmail.com     | Female | 2005-06-14    | 2025-12-15 21:14:33 |      NULL |
+| 101 | Rahul Jain          | rahul.jain@gmail.com      | Male   | 2004-08-21    | 2025-12-15 21:14:33 |      NULL |
+| 102 | Pooja Agarwal       | pooja.agarwal@gmail.com   | Female | 2005-05-10    | 2025-12-15 21:14:33 |      NULL |
+| 103 | Vikas Yadav         | vikas.yadav@gmail.com     | Male   | 2003-10-02    | 2025-12-15 21:14:33 |      NULL |
+| 104 | Sneha Nair          | sneha.nair@gmail.com      | Female | 2004-04-27    | 2025-12-15 21:14:33 |      NULL |
+| 105 | Amit Patel          | amit.patel@gmail.com      | Male   | 2005-01-19    | 2025-12-15 21:14:33 |      NULL |
+| 106 | Kritika Arora       | kritika.arora@gmail.com   | Female | 2003-06-03    | 2025-12-15 21:14:33 |      NULL |
+| 107 | Suresh Reddy        | suresh.reddy@gmail.com    | Male   | 2004-12-25    | 2025-12-15 21:14:33 |      NULL |
+| 108 | Nisha Joshi         | nisha.joshi@gmail.com     | Female | 2005-09-09    | 2025-12-15 21:14:33 |      NULL |
+| 109 | Arjun Iyer          | arjun.iyer@gmail.com      | Male   | 2003-02-14    | 2025-12-15 21:14:33 |      NULL |
+| 110 | Ritika Bansal       | ritika.bansal@gmail.com   | Female | 2004-07-29    | 2025-12-15 21:14:33 |      NULL |
+| 111 | Manish Chawla       | manish.chawla@gmail.com   | Male   | 2005-11-06    | 2025-12-15 21:14:33 |      NULL |
+| 112 | Shreya Sengupta     | shreya.s@gmail.com        | Female | 2003-08-17    | 2025-12-15 21:14:33 |      NULL |
+| 113 | Nikhil Saxena       | nikhil.saxena@gmail.com   | Male   | 2004-01-08    | 2025-12-15 21:14:33 |      NULL |
+| 114 | Aishwarya Pillai    | aishwarya.p@gmail.com     | Female | 2005-03-31    | 2025-12-15 21:14:33 |      NULL |
+| 115 | Deepak Mishra       | deepak.mishra@gmail.com   | Male   | 2003-05-24    | 2025-12-15 21:14:33 |      NULL |
+| 116 | Isha Khanna         | isha.khanna@gmail.com     | Female | 2004-10-12    | 2025-12-15 21:14:33 |      NULL |
+| 117 | Sanjay Kulkarni     | sanjay.k@gmail.com        | Male   | 2005-07-07    | 2025-12-15 21:14:33 |      NULL |
+| 118 | Rhea Dutta          | rhea.dutta@gmail.com      | Female | 2003-09-20    | 2025-12-15 21:14:33 |      NULL |
+| 119 | Mohit Bhatia        | mohit.bhatia@gmail.com    | Male   | 2004-06-01    | 2025-12-15 21:14:33 |      NULL |
+| 120 | Kavya Menon         | kavya.menon@gmail.com     | Female | 2005-02-26    | 2025-12-15 21:14:33 |      NULL |
+| 121 | Yash Thakur         | yash.thakur@gmail.com     | Male   | 2003-12-04    | 2025-12-15 21:14:33 |      NULL |
+| 122 | Mehul Shah          | mehul.shah@gmail.com      | Male   | 2004-08-15    | 2025-12-15 21:14:33 |      NULL |
+| 123 | Tanvi Kulkarni      | tanvi.k@gmail.com         | Female | 2005-11-28    | 2025-12-15 21:14:33 |      NULL |
+| 124 | Akash Pandey        | akash.pandey@gmail.com    | Male   | 2003-04-19    | 2025-12-15 21:14:33 |      NULL |
+| 125 | Ritu Malhotra       | ritu.m@gmail.com          | Female | 2004-01-30    | 2025-12-15 21:14:33 |      NULL |
+| 126 | Varun Arora         | varun.arora@gmail.com     | Male   | 2005-06-22    | 2025-12-15 21:14:33 |      NULL |
+| 127 | Sonal Desai         | sonal.desai@gmail.com     | Female | 2003-07-13    | 2025-12-15 21:14:33 |      NULL |
+| 128 | Harsh Vardhan       | harsh.v@gmail.com         | Male   | 2004-09-02    | 2025-12-15 21:14:33 |      NULL |
+| 129 | Pallavi Joshi       | pallavi.j@gmail.com       | Female | 2005-05-16    | 2025-12-15 21:14:33 |      NULL |
+| 130 | Karan Oberoi        | karan.oberoi@gmail.com    | Male   | 2003-10-09    | 2025-12-15 21:14:33 |      NULL |
+| 131 | Mitali Roy          | mitali.roy@gmail.com      | Female | 2004-02-18    | 2025-12-15 21:14:33 |      NULL |
+| 132 | Rakesh Sinha        | rakesh.sinha@gmail.com    | Male   | 2005-12-01    | 2025-12-15 21:14:33 |      NULL |
+| 133 | Ankit Verma         | ankit.verma@gmail.com     | Male   | 2004-06-25    | 2025-12-15 21:14:33 |      NULL |
+| 134 | Divya Bhatt         | divya.bhatt@gmail.com     | Female | 2003-03-08    | 2025-12-15 21:14:33 |      NULL |
+| 135 | Rohini Rao          | rohini.rao@gmail.com      | Female | 2005-08-19    | 2025-12-15 21:14:33 |      NULL |
+| 136 | Keshav Tiwari       | keshav.tiwari@gmail.com   | Male   | 2004-11-14    | 2025-12-15 21:14:33 |      NULL |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+46 rows in set (0.00 sec)
+
+mysql> INSERT INTO user VALUES(3,'Naina Singh','nain@gmail.com','Female','2007-09-21', CURRENT_TIMESTAMP);
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO user (id,name,email_id,gender,date_of_birth) VALUES(3,'Naina Singh','nain@gmail.com','Female','2007-09-21');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM user WHERE id = 3;
++----+-------------+----------------+--------+---------------+---------------------+-----------+
+| id | name        | email_id       | gender | date_of_birth | created_at          | is_active |
++----+-------------+----------------+--------+---------------+---------------------+-----------+
+|  3 | Naina Singh | nain@gmail.com | Female | 2007-09-21    | 2025-12-16 13:28:32 |         1 |
++----+-------------+----------------+--------+---------------+---------------------+-----------+
+1 row in set (0.00 sec)
+
+mysql> ALTER TABLE user DROP COLUMN is_acitve;
+ERROR 1091 (42000): Can't DROP 'is_acitve'; check that column/key exists
+mysql> ALTER TABLE user DROP COLUMN is_active;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM user WHERE id = 3;
++----+-------------+----------------+--------+---------------+---------------------+
+| id | name        | email_id       | gender | date_of_birth | created_at          |
++----+-------------+----------------+--------+---------------+---------------------+
+|  3 | Naina Singh | nain@gmail.com | Female | 2007-09-21    | 2025-12-16 13:28:32 |
++----+-------------+----------------+--------+---------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> RENAME user TO users;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO users' at line 1
+mysql> RENAME user TO 'users';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TO 'users'' at line 1
+mysql> SHOW TABLES
+    -> ;
++---------------------+
+| Tables_in_gisma_sql |
++---------------------+
+| user                |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> RENAME TABLE user TO users;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> NAME DATABASE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NAME DATABASE' at line 1
+mysql> ALTER TABLE users MODIFY COLUMN gender ENUM('Male','Female','other') AFTER name;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM users;
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+| id  | name                | gender | email_id                  | date_of_birth | created_at          |
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+|   1 | Tushar              | Male   | tusharrbhardwaj@gmail.com | 2007-09-22    | 2025-12-15 16:33:19 |
+|   2 | Siddharth Chaudhary | Male   | amarakiyoplay@gmail.com   | 2005-04-16    | 2025-12-15 21:07:00 |
+|   3 | Naina Singh         | Female | nain@gmail.com            | 2007-09-21    | 2025-12-16 13:28:32 |
+|  93 | Aarav Sharma        | Male   | aarav.sharma@gmail.com    | 2004-01-15    | 2025-12-15 21:14:33 |
+|  94 | Ananya Verma        | Female | ananya.verma@gmail.com    | 2005-03-22    | 2025-12-15 21:14:33 |
+|  95 | Rohan Gupta         | Male   | rohan.gupta@gmail.com     | 2003-07-11    | 2025-12-15 21:14:33 |
+|  96 | Priya Mehta         | Female | priya.mehta@gmail.com     | 2004-09-05    | 2025-12-15 21:14:33 |
+|  97 | Kunal Singh         | Male   | kunal.singh@gmail.com     | 2005-12-18    | 2025-12-15 21:14:33 |
+|  98 | Neha Kapoor         | Female | neha.kapoor@gmail.com     | 2004-02-09    | 2025-12-15 21:14:33 |
+|  99 | Aditya Malhotra     | Male   | aditya.malhotra@gmail.com | 2003-11-30    | 2025-12-15 21:14:33 |
+| 100 | Simran Kaur         | Female | simran.kaur@gmail.com     | 2005-06-14    | 2025-12-15 21:14:33 |
+| 101 | Rahul Jain          | Male   | rahul.jain@gmail.com      | 2004-08-21    | 2025-12-15 21:14:33 |
+| 102 | Pooja Agarwal       | Female | pooja.agarwal@gmail.com   | 2005-05-10    | 2025-12-15 21:14:33 |
+| 103 | Vikas Yadav         | Male   | vikas.yadav@gmail.com     | 2003-10-02    | 2025-12-15 21:14:33 |
+| 104 | Sneha Nair          | Female | sneha.nair@gmail.com      | 2004-04-27    | 2025-12-15 21:14:33 |
+| 105 | Amit Patel          | Male   | amit.patel@gmail.com      | 2005-01-19    | 2025-12-15 21:14:33 |
+| 106 | Kritika Arora       | Female | kritika.arora@gmail.com   | 2003-06-03    | 2025-12-15 21:14:33 |
+| 107 | Suresh Reddy        | Male   | suresh.reddy@gmail.com    | 2004-12-25    | 2025-12-15 21:14:33 |
+| 108 | Nisha Joshi         | Female | nisha.joshi@gmail.com     | 2005-09-09    | 2025-12-15 21:14:33 |
+| 109 | Arjun Iyer          | Male   | arjun.iyer@gmail.com      | 2003-02-14    | 2025-12-15 21:14:33 |
+| 110 | Ritika Bansal       | Female | ritika.bansal@gmail.com   | 2004-07-29    | 2025-12-15 21:14:33 |
+| 111 | Manish Chawla       | Male   | manish.chawla@gmail.com   | 2005-11-06    | 2025-12-15 21:14:33 |
+| 112 | Shreya Sengupta     | Female | shreya.s@gmail.com        | 2003-08-17    | 2025-12-15 21:14:33 |
+| 113 | Nikhil Saxena       | Male   | nikhil.saxena@gmail.com   | 2004-01-08    | 2025-12-15 21:14:33 |
+| 114 | Aishwarya Pillai    | Female | aishwarya.p@gmail.com     | 2005-03-31    | 2025-12-15 21:14:33 |
+| 115 | Deepak Mishra       | Male   | deepak.mishra@gmail.com   | 2003-05-24    | 2025-12-15 21:14:33 |
+| 116 | Isha Khanna         | Female | isha.khanna@gmail.com     | 2004-10-12    | 2025-12-15 21:14:33 |
+| 117 | Sanjay Kulkarni     | Male   | sanjay.k@gmail.com        | 2005-07-07    | 2025-12-15 21:14:33 |
+| 118 | Rhea Dutta          | Female | rhea.dutta@gmail.com      | 2003-09-20    | 2025-12-15 21:14:33 |
+| 119 | Mohit Bhatia        | Male   | mohit.bhatia@gmail.com    | 2004-06-01    | 2025-12-15 21:14:33 |
+| 120 | Kavya Menon         | Female | kavya.menon@gmail.com     | 2005-02-26    | 2025-12-15 21:14:33 |
+| 121 | Yash Thakur         | Male   | yash.thakur@gmail.com     | 2003-12-04    | 2025-12-15 21:14:33 |
+| 122 | Mehul Shah          | Male   | mehul.shah@gmail.com      | 2004-08-15    | 2025-12-15 21:14:33 |
+| 123 | Tanvi Kulkarni      | Female | tanvi.k@gmail.com         | 2005-11-28    | 2025-12-15 21:14:33 |
+| 124 | Akash Pandey        | Male   | akash.pandey@gmail.com    | 2003-04-19    | 2025-12-15 21:14:33 |
+| 125 | Ritu Malhotra       | Female | ritu.m@gmail.com          | 2004-01-30    | 2025-12-15 21:14:33 |
+| 126 | Varun Arora         | Male   | varun.arora@gmail.com     | 2005-06-22    | 2025-12-15 21:14:33 |
+| 127 | Sonal Desai         | Female | sonal.desai@gmail.com     | 2003-07-13    | 2025-12-15 21:14:33 |
+| 128 | Harsh Vardhan       | Male   | harsh.v@gmail.com         | 2004-09-02    | 2025-12-15 21:14:33 |
+| 129 | Pallavi Joshi       | Female | pallavi.j@gmail.com       | 2005-05-16    | 2025-12-15 21:14:33 |
+| 130 | Karan Oberoi        | Male   | karan.oberoi@gmail.com    | 2003-10-09    | 2025-12-15 21:14:33 |
+| 131 | Mitali Roy          | Female | mitali.roy@gmail.com      | 2004-02-18    | 2025-12-15 21:14:33 |
+| 132 | Rakesh Sinha        | Male   | rakesh.sinha@gmail.com    | 2005-12-01    | 2025-12-15 21:14:33 |
+| 133 | Ankit Verma         | Male   | ankit.verma@gmail.com     | 2004-06-25    | 2025-12-15 21:14:33 |
+| 134 | Divya Bhatt         | Female | divya.bhatt@gmail.com     | 2003-03-08    | 2025-12-15 21:14:33 |
+| 135 | Rohini Rao          | Female | rohini.rao@gmail.com      | 2005-08-19    | 2025-12-15 21:14:33 |
+| 136 | Keshav Tiwari       | Male   | keshav.tiwari@gmail.com   | 2004-11-14    | 2025-12-15 21:14:33 |
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+47 rows in set (0.00 sec)
+
+mysql> SELECT * FROM users where gender = 'Male';
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+| id  | name                | gender | email_id                  | date_of_birth | created_at          |
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+|   1 | Tushar              | Male   | tusharrbhardwaj@gmail.com | 2007-09-22    | 2025-12-15 16:33:19 |
+|   2 | Siddharth Chaudhary | Male   | amarakiyoplay@gmail.com   | 2005-04-16    | 2025-12-15 21:07:00 |
+|  93 | Aarav Sharma        | Male   | aarav.sharma@gmail.com    | 2004-01-15    | 2025-12-15 21:14:33 |
+|  95 | Rohan Gupta         | Male   | rohan.gupta@gmail.com     | 2003-07-11    | 2025-12-15 21:14:33 |
+|  97 | Kunal Singh         | Male   | kunal.singh@gmail.com     | 2005-12-18    | 2025-12-15 21:14:33 |
+|  99 | Aditya Malhotra     | Male   | aditya.malhotra@gmail.com | 2003-11-30    | 2025-12-15 21:14:33 |
+| 101 | Rahul Jain          | Male   | rahul.jain@gmail.com      | 2004-08-21    | 2025-12-15 21:14:33 |
+| 103 | Vikas Yadav         | Male   | vikas.yadav@gmail.com     | 2003-10-02    | 2025-12-15 21:14:33 |
+| 105 | Amit Patel          | Male   | amit.patel@gmail.com      | 2005-01-19    | 2025-12-15 21:14:33 |
+| 107 | Suresh Reddy        | Male   | suresh.reddy@gmail.com    | 2004-12-25    | 2025-12-15 21:14:33 |
+| 109 | Arjun Iyer          | Male   | arjun.iyer@gmail.com      | 2003-02-14    | 2025-12-15 21:14:33 |
+| 111 | Manish Chawla       | Male   | manish.chawla@gmail.com   | 2005-11-06    | 2025-12-15 21:14:33 |
+| 113 | Nikhil Saxena       | Male   | nikhil.saxena@gmail.com   | 2004-01-08    | 2025-12-15 21:14:33 |
+| 115 | Deepak Mishra       | Male   | deepak.mishra@gmail.com   | 2003-05-24    | 2025-12-15 21:14:33 |
+| 117 | Sanjay Kulkarni     | Male   | sanjay.k@gmail.com        | 2005-07-07    | 2025-12-15 21:14:33 |
+| 119 | Mohit Bhatia        | Male   | mohit.bhatia@gmail.com    | 2004-06-01    | 2025-12-15 21:14:33 |
+| 121 | Yash Thakur         | Male   | yash.thakur@gmail.com     | 2003-12-04    | 2025-12-15 21:14:33 |
+| 122 | Mehul Shah          | Male   | mehul.shah@gmail.com      | 2004-08-15    | 2025-12-15 21:14:33 |
+| 124 | Akash Pandey        | Male   | akash.pandey@gmail.com    | 2003-04-19    | 2025-12-15 21:14:33 |
+| 126 | Varun Arora         | Male   | varun.arora@gmail.com     | 2005-06-22    | 2025-12-15 21:14:33 |
+| 128 | Harsh Vardhan       | Male   | harsh.v@gmail.com         | 2004-09-02    | 2025-12-15 21:14:33 |
+| 130 | Karan Oberoi        | Male   | karan.oberoi@gmail.com    | 2003-10-09    | 2025-12-15 21:14:33 |
+| 132 | Rakesh Sinha        | Male   | rakesh.sinha@gmail.com    | 2005-12-01    | 2025-12-15 21:14:33 |
+| 133 | Ankit Verma         | Male   | ankit.verma@gmail.com     | 2004-06-25    | 2025-12-15 21:14:33 |
+| 136 | Keshav Tiwari       | Male   | keshav.tiwari@gmail.com   | 2004-11-14    | 2025-12-15 21:14:33 |
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+25 rows in set (0.00 sec)
+
+mysql> SELECT * FROM users where gender = 'Male' and date_of_birth > 2007-01-01;
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+| id  | name                | gender | email_id                  | date_of_birth | created_at          |
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+|   1 | Tushar              | Male   | tusharrbhardwaj@gmail.com | 2007-09-22    | 2025-12-15 16:33:19 |
+|   2 | Siddharth Chaudhary | Male   | amarakiyoplay@gmail.com   | 2005-04-16    | 2025-12-15 21:07:00 |
+|  93 | Aarav Sharma        | Male   | aarav.sharma@gmail.com    | 2004-01-15    | 2025-12-15 21:14:33 |
+|  95 | Rohan Gupta         | Male   | rohan.gupta@gmail.com     | 2003-07-11    | 2025-12-15 21:14:33 |
+|  97 | Kunal Singh         | Male   | kunal.singh@gmail.com     | 2005-12-18    | 2025-12-15 21:14:33 |
+|  99 | Aditya Malhotra     | Male   | aditya.malhotra@gmail.com | 2003-11-30    | 2025-12-15 21:14:33 |
+| 101 | Rahul Jain          | Male   | rahul.jain@gmail.com      | 2004-08-21    | 2025-12-15 21:14:33 |
+| 103 | Vikas Yadav         | Male   | vikas.yadav@gmail.com     | 2003-10-02    | 2025-12-15 21:14:33 |
+| 105 | Amit Patel          | Male   | amit.patel@gmail.com      | 2005-01-19    | 2025-12-15 21:14:33 |
+| 107 | Suresh Reddy        | Male   | suresh.reddy@gmail.com    | 2004-12-25    | 2025-12-15 21:14:33 |
+| 109 | Arjun Iyer          | Male   | arjun.iyer@gmail.com      | 2003-02-14    | 2025-12-15 21:14:33 |
+| 111 | Manish Chawla       | Male   | manish.chawla@gmail.com   | 2005-11-06    | 2025-12-15 21:14:33 |
+| 113 | Nikhil Saxena       | Male   | nikhil.saxena@gmail.com   | 2004-01-08    | 2025-12-15 21:14:33 |
+| 115 | Deepak Mishra       | Male   | deepak.mishra@gmail.com   | 2003-05-24    | 2025-12-15 21:14:33 |
+| 117 | Sanjay Kulkarni     | Male   | sanjay.k@gmail.com        | 2005-07-07    | 2025-12-15 21:14:33 |
+| 119 | Mohit Bhatia        | Male   | mohit.bhatia@gmail.com    | 2004-06-01    | 2025-12-15 21:14:33 |
+| 121 | Yash Thakur         | Male   | yash.thakur@gmail.com     | 2003-12-04    | 2025-12-15 21:14:33 |
+| 122 | Mehul Shah          | Male   | mehul.shah@gmail.com      | 2004-08-15    | 2025-12-15 21:14:33 |
+| 124 | Akash Pandey        | Male   | akash.pandey@gmail.com    | 2003-04-19    | 2025-12-15 21:14:33 |
+| 126 | Varun Arora         | Male   | varun.arora@gmail.com     | 2005-06-22    | 2025-12-15 21:14:33 |
+| 128 | Harsh Vardhan       | Male   | harsh.v@gmail.com         | 2004-09-02    | 2025-12-15 21:14:33 |
+| 130 | Karan Oberoi        | Male   | karan.oberoi@gmail.com    | 2003-10-09    | 2025-12-15 21:14:33 |
+| 132 | Rakesh Sinha        | Male   | rakesh.sinha@gmail.com    | 2005-12-01    | 2025-12-15 21:14:33 |
+| 133 | Ankit Verma         | Male   | ankit.verma@gmail.com     | 2004-06-25    | 2025-12-15 21:14:33 |
+| 136 | Keshav Tiwari       | Male   | keshav.tiwari@gmail.com   | 2004-11-14    | 2025-12-15 21:14:33 |
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+25 rows in set, 1 warning (0.00 sec)
+
+mysql> SELECT * FROM users where gender = 'Male' and date_of_birth < 2007-01-01;
+Empty set, 1 warning (0.00 sec)
+
+mysql> SELECT * FROM users where gender = 'Male' and date_of_birth < 2005-01-01;
+Empty set, 1 warning (0.00 sec)
+
+mysql> SELECT * FROM users where gender = 'Male' and date_of_birth > 2005-01-01;
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+| id  | name                | gender | email_id                  | date_of_birth | created_at          |
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+|   1 | Tushar              | Male   | tusharrbhardwaj@gmail.com | 2007-09-22    | 2025-12-15 16:33:19 |
+|   2 | Siddharth Chaudhary | Male   | amarakiyoplay@gmail.com   | 2005-04-16    | 2025-12-15 21:07:00 |
+|  93 | Aarav Sharma        | Male   | aarav.sharma@gmail.com    | 2004-01-15    | 2025-12-15 21:14:33 |
+|  95 | Rohan Gupta         | Male   | rohan.gupta@gmail.com     | 2003-07-11    | 2025-12-15 21:14:33 |
+|  97 | Kunal Singh         | Male   | kunal.singh@gmail.com     | 2005-12-18    | 2025-12-15 21:14:33 |
+|  99 | Aditya Malhotra     | Male   | aditya.malhotra@gmail.com | 2003-11-30    | 2025-12-15 21:14:33 |
+| 101 | Rahul Jain          | Male   | rahul.jain@gmail.com      | 2004-08-21    | 2025-12-15 21:14:33 |
+| 103 | Vikas Yadav         | Male   | vikas.yadav@gmail.com     | 2003-10-02    | 2025-12-15 21:14:33 |
+| 105 | Amit Patel          | Male   | amit.patel@gmail.com      | 2005-01-19    | 2025-12-15 21:14:33 |
+| 107 | Suresh Reddy        | Male   | suresh.reddy@gmail.com    | 2004-12-25    | 2025-12-15 21:14:33 |
+| 109 | Arjun Iyer          | Male   | arjun.iyer@gmail.com      | 2003-02-14    | 2025-12-15 21:14:33 |
+| 111 | Manish Chawla       | Male   | manish.chawla@gmail.com   | 2005-11-06    | 2025-12-15 21:14:33 |
+| 113 | Nikhil Saxena       | Male   | nikhil.saxena@gmail.com   | 2004-01-08    | 2025-12-15 21:14:33 |
+| 115 | Deepak Mishra       | Male   | deepak.mishra@gmail.com   | 2003-05-24    | 2025-12-15 21:14:33 |
+| 117 | Sanjay Kulkarni     | Male   | sanjay.k@gmail.com        | 2005-07-07    | 2025-12-15 21:14:33 |
+| 119 | Mohit Bhatia        | Male   | mohit.bhatia@gmail.com    | 2004-06-01    | 2025-12-15 21:14:33 |
+| 121 | Yash Thakur         | Male   | yash.thakur@gmail.com     | 2003-12-04    | 2025-12-15 21:14:33 |
+| 122 | Mehul Shah          | Male   | mehul.shah@gmail.com      | 2004-08-15    | 2025-12-15 21:14:33 |
+| 124 | Akash Pandey        | Male   | akash.pandey@gmail.com    | 2003-04-19    | 2025-12-15 21:14:33 |
+| 126 | Varun Arora         | Male   | varun.arora@gmail.com     | 2005-06-22    | 2025-12-15 21:14:33 |
+| 128 | Harsh Vardhan       | Male   | harsh.v@gmail.com         | 2004-09-02    | 2025-12-15 21:14:33 |
+| 130 | Karan Oberoi        | Male   | karan.oberoi@gmail.com    | 2003-10-09    | 2025-12-15 21:14:33 |
+| 132 | Rakesh Sinha        | Male   | rakesh.sinha@gmail.com    | 2005-12-01    | 2025-12-15 21:14:33 |
+| 133 | Ankit Verma         | Male   | ankit.verma@gmail.com     | 2004-06-25    | 2025-12-15 21:14:33 |
+| 136 | Keshav Tiwari       | Male   | keshav.tiwari@gmail.com   | 2004-11-14    | 2025-12-15 21:14:33 |
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+25 rows in set, 1 warning (0.00 sec)
+
+mysql> SELECT * FROM users where gender = 'Male' and date_of_birth > '2005-01-01';
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+| id  | name                | gender | email_id                  | date_of_birth | created_at          |
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+|   1 | Tushar              | Male   | tusharrbhardwaj@gmail.com | 2007-09-22    | 2025-12-15 16:33:19 |
+|   2 | Siddharth Chaudhary | Male   | amarakiyoplay@gmail.com   | 2005-04-16    | 2025-12-15 21:07:00 |
+|  97 | Kunal Singh         | Male   | kunal.singh@gmail.com     | 2005-12-18    | 2025-12-15 21:14:33 |
+| 105 | Amit Patel          | Male   | amit.patel@gmail.com      | 2005-01-19    | 2025-12-15 21:14:33 |
+| 111 | Manish Chawla       | Male   | manish.chawla@gmail.com   | 2005-11-06    | 2025-12-15 21:14:33 |
+| 117 | Sanjay Kulkarni     | Male   | sanjay.k@gmail.com        | 2005-07-07    | 2025-12-15 21:14:33 |
+| 126 | Varun Arora         | Male   | varun.arora@gmail.com     | 2005-06-22    | 2025-12-15 21:14:33 |
+| 132 | Rakesh Sinha        | Male   | rakesh.sinha@gmail.com    | 2005-12-01    | 2025-12-15 21:14:33 |
++-----+---------------------+--------+---------------------------+---------------+---------------------+
+8 rows in set (0.00 sec)
+
+mysql> SELECT * FROM users where gender = 'Male' and date_of_birth < '2005-01-01';
++-----+-----------------+--------+---------------------------+---------------+---------------------+
+| id  | name            | gender | email_id                  | date_of_birth | created_at          |
++-----+-----------------+--------+---------------------------+---------------+---------------------+
+|  93 | Aarav Sharma    | Male   | aarav.sharma@gmail.com    | 2004-01-15    | 2025-12-15 21:14:33 |
+|  95 | Rohan Gupta     | Male   | rohan.gupta@gmail.com     | 2003-07-11    | 2025-12-15 21:14:33 |
+|  99 | Aditya Malhotra | Male   | aditya.malhotra@gmail.com | 2003-11-30    | 2025-12-15 21:14:33 |
+| 101 | Rahul Jain      | Male   | rahul.jain@gmail.com      | 2004-08-21    | 2025-12-15 21:14:33 |
+| 103 | Vikas Yadav     | Male   | vikas.yadav@gmail.com     | 2003-10-02    | 2025-12-15 21:14:33 |
+| 107 | Suresh Reddy    | Male   | suresh.reddy@gmail.com    | 2004-12-25    | 2025-12-15 21:14:33 |
+| 109 | Arjun Iyer      | Male   | arjun.iyer@gmail.com      | 2003-02-14    | 2025-12-15 21:14:33 |
+| 113 | Nikhil Saxena   | Male   | nikhil.saxena@gmail.com   | 2004-01-08    | 2025-12-15 21:14:33 |
+| 115 | Deepak Mishra   | Male   | deepak.mishra@gmail.com   | 2003-05-24    | 2025-12-15 21:14:33 |
+| 119 | Mohit Bhatia    | Male   | mohit.bhatia@gmail.com    | 2004-06-01    | 2025-12-15 21:14:33 |
+| 121 | Yash Thakur     | Male   | yash.thakur@gmail.com     | 2003-12-04    | 2025-12-15 21:14:33 |
+| 122 | Mehul Shah      | Male   | mehul.shah@gmail.com      | 2004-08-15    | 2025-12-15 21:14:33 |
+| 124 | Akash Pandey    | Male   | akash.pandey@gmail.com    | 2003-04-19    | 2025-12-15 21:14:33 |
+| 128 | Harsh Vardhan   | Male   | harsh.v@gmail.com         | 2004-09-02    | 2025-12-15 21:14:33 |
+| 130 | Karan Oberoi    | Male   | karan.oberoi@gmail.com    | 2003-10-09    | 2025-12-15 21:14:33 |
+| 133 | Ankit Verma     | Male   | ankit.verma@gmail.com     | 2004-06-25    | 2025-12-15 21:14:33 |
+| 136 | Keshav Tiwari   | Male   | keshav.tiwari@gmail.com   | 2004-11-14    | 2025-12-15 21:14:33 |
++-----+-----------------+--------+---------------------------+---------------+---------------------+
+17 rows in set (0.00 sec)
+
+mysql> ALTER TABLE user MODIFY COLUMN gender ENUM('Male','Female','other') AFTER email_id;
+ERROR 1146 (42S02): Table 'gisma_sql.user' doesn't exist
+mysql> ALTER TABLE users MODIFY COLUMN gender ENUM('Male','Female','other') AFTER email_id;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM users WHERE id = 3;
++----+-------------+----------------+--------+---------------+---------------------+
+| id | name        | email_id       | gender | date_of_birth | created_at          |
++----+-------------+----------------+--------+---------------+---------------------+
+|  3 | Naina Singh | nain@gmail.com | Female | 2007-09-21    | 2025-12-16 13:28:32 |
++----+-------------+----------------+--------+---------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT * FROM user WHERE date_of_birth IN BETWEEN '2004-01-01' AND '2005-01-01';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN '2004-01-01' AND '2005-01-01'' at line 1
+mysql> SELECT * FROM users WHERE date_of_birth IN BETWEEN '2004-01-01' AND '2005-01-01' LIMIT 2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN '2004-01-01' AND '2005-01-01' LIMIT 2' at line 1
+mysql> SELECT * FROM users WHERE date_of_birth IN BETWEEN '2005-01-01' AND '2004-01-01' LIMIT 2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BETWEEN '2005-01-01' AND '2004-01-01' LIMIT 2' at line 1
+mysql> SELECT * FROM users WHERE date_of_birth BETWEEN '2005-01-01' AND '2004-01-01' LIMIT 2;
+Empty set (0.00 sec)
+
+mysql> SELECT * FROM users WHERE date_of_birth BETWEEN '2004-01-01' AND '2005-01-01' LIMIT 2;
++----+--------------+------------------------+--------+---------------+---------------------+
+| id | name         | email_id               | gender | date_of_birth | created_at          |
++----+--------------+------------------------+--------+---------------+---------------------+
+| 93 | Aarav Sharma | aarav.sharma@gmail.com | Male   | 2004-01-15    | 2025-12-15 21:14:33 |
+| 96 | Priya Mehta  | priya.mehta@gmail.com  | Female | 2004-09-05    | 2025-12-15 21:14:33 |
++----+--------------+------------------------+--------+---------------+---------------------+
+2 rows in set (0.01 sec)
+
+mysql> SELECT * FROM users WHERE created_at LIKE '2025-12-14%';
+Empty set (0.00 sec)
+
+mysql> SELECT * FROM users WHERE created_at LIKE '2025-12-16%';
++----+-------------+----------------+--------+---------------+---------------------+
+| id | name        | email_id       | gender | date_of_birth | created_at          |
++----+-------------+----------------+--------+---------------+---------------------+
+|  3 | Naina Singh | nain@gmail.com | Female | 2007-09-21    | 2025-12-16 13:28:32 |
++----+-------------+----------------+--------+---------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT * FROM users WHERE date_of_birth BETWEEN '2004-01-01' AND '2005-01-01' LIMIT 0,2;
++----+--------------+------------------------+--------+---------------+---------------------+
+| id | name         | email_id               | gender | date_of_birth | created_at          |
++----+--------------+------------------------+--------+---------------+---------------------+
+| 93 | Aarav Sharma | aarav.sharma@gmail.com | Male   | 2004-01-15    | 2025-12-15 21:14:33 |
+| 96 | Priya Mehta  | priya.mehta@gmail.com  | Female | 2004-09-05    | 2025-12-15 21:14:33 |
++----+--------------+------------------------+--------+---------------+---------------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT * FROM users WHERE date_of_birth BETWEEN '2004-01-01' AND '2005-01-01' ORDER BY name DESC LIMIT 0,2;
++-----+--------------+------------------------+--------+---------------+---------------------+
+| id  | name         | email_id               | gender | date_of_birth | created_at          |
++-----+--------------+------------------------+--------+---------------+---------------------+
+| 107 | Suresh Reddy | suresh.reddy@gmail.com | Male   | 2004-12-25    | 2025-12-15 21:14:33 |
+| 104 | Sneha Nair   | sneha.nair@gmail.com   | Female | 2004-04-27    | 2025-12-15 21:14:33 |
++-----+--------------+------------------------+--------+---------------+---------------------+
+2 rows in set (0.01 sec)
+
+mysql> SELECT * FROM users WHERE date_of_birth BETWEEN '2004-01-01' AND '2005-01-01' LIMIT 0,2 ORDER BY name DESC;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY name DESC' at line 1
+mysql> SELECT * FROM users WHERE date_of_birth BETWEEN '2004-01-01' AND '2005-01-01' LIMIT 2 ORDER BY name DESC;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY name DESC' at line 1
+mysql> SELECT * FROM users WHERE date_of_birth BETWEEN '2004-01-01' AND '2005-01-01' ORDER BY name DESC LIMIT 2;
++-----+--------------+------------------------+--------+---------------+---------------------+
+| id  | name         | email_id               | gender | date_of_birth | created_at          |
++-----+--------------+------------------------+--------+---------------+---------------------+
+| 107 | Suresh Reddy | suresh.reddy@gmail.com | Male   | 2004-12-25    | 2025-12-15 21:14:33 |
+| 104 | Sneha Nair   | sneha.nair@gmail.com   | Female | 2004-04-27    | 2025-12-15 21:14:33 |
++-----+--------------+------------------------+--------+---------------+---------------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT * FROM users WHERE date_of_birth BETWEEN '2004-01-01' AND '2005-01-01' ORDER BY name ASC LIMIT 2;
++-----+--------------+------------------------+--------+---------------+---------------------+
+| id  | name         | email_id               | gender | date_of_birth | created_at          |
++-----+--------------+------------------------+--------+---------------+---------------------+
+|  93 | Aarav Sharma | aarav.sharma@gmail.com | Male   | 2004-01-15    | 2025-12-15 21:14:33 |
+| 133 | Ankit Verma  | ankit.verma@gmail.com  | Male   | 2004-06-25    | 2025-12-15 21:14:33 |
++-----+--------------+------------------------+--------+---------------+---------------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT * FROM users WHERE date_of_birth BETWEEN '2004-01-01' AND '2005-01-01' ORDER BY id ASC LIMIT 2;
++----+--------------+------------------------+--------+---------------+---------------------+
+| id | name         | email_id               | gender | date_of_birth | created_at          |
++----+--------------+------------------------+--------+---------------+---------------------+
+| 93 | Aarav Sharma | aarav.sharma@gmail.com | Male   | 2004-01-15    | 2025-12-15 21:14:33 |
+| 96 | Priya Mehta  | priya.mehta@gmail.com  | Female | 2004-09-05    | 2025-12-15 21:14:33 |
++----+--------------+------------------------+--------+---------------+---------------------+
+2 rows in set (0.00 sec)
+
+mysql> ALTER TABLE users ADD COLUMN is_acitve BOOLEAN;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> UPDATE users
+    -> SET is_activ TRUE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TRUE' at line 2
+mysql> UPDATE users SET is_activ = TRUE;
+ERROR 1054 (42S22): Unknown column 'is_activ' in 'field list'
+mysql> UPDATE users SET is_active = TRUE;
+ERROR 1054 (42S22): Unknown column 'is_active' in 'field list'
+mysql> ALTER TABLE MODIFY COLUMN is_active BOOLEAN DEFAULT FALSE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'COLUMN is_active BOOLEAN DEFAULT FALSE' at line 1
+mysql> ALTER TABLE users
+    -> MODIFY COLUMN is_active
+    -> DFAULT TRUE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DFAULT TRUE' at line 3
+mysql> ALTER TABLE users 
+    -> MODIFY COLUMN is_active
+    -> DEFAULT TRUE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DEFAULT TRUE' at line 3
+mysql> ALTER TABLE users MODIFY COLUMN is_active BOOLEAN DEFAULT TRUE;
+ERROR 1054 (42S22): Unknown column 'is_active' in 'users'
+mysql> ALTER TABLE users
+    -> MODIFY COLUMN is_acitve BOOLEAN
+    -> DEFAULT TRUE;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM users
+    -> ;
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+| id  | name                | email_id                  | gender | date_of_birth | created_at          | is_acitve |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+|   1 | Tushar              | tusharrbhardwaj@gmail.com | Male   | 2007-09-22    | 2025-12-15 16:33:19 |      NULL |
+|   2 | Siddharth Chaudhary | amarakiyoplay@gmail.com   | Male   | 2005-04-16    | 2025-12-15 21:07:00 |      NULL |
+|   3 | Naina Singh         | nain@gmail.com            | Female | 2007-09-21    | 2025-12-16 13:28:32 |      NULL |
+|  93 | Aarav Sharma        | aarav.sharma@gmail.com    | Male   | 2004-01-15    | 2025-12-15 21:14:33 |      NULL |
+|  94 | Ananya Verma        | ananya.verma@gmail.com    | Female | 2005-03-22    | 2025-12-15 21:14:33 |      NULL |
+|  95 | Rohan Gupta         | rohan.gupta@gmail.com     | Male   | 2003-07-11    | 2025-12-15 21:14:33 |      NULL |
+|  96 | Priya Mehta         | priya.mehta@gmail.com     | Female | 2004-09-05    | 2025-12-15 21:14:33 |      NULL |
+|  97 | Kunal Singh         | kunal.singh@gmail.com     | Male   | 2005-12-18    | 2025-12-15 21:14:33 |      NULL |
+|  98 | Neha Kapoor         | neha.kapoor@gmail.com     | Female | 2004-02-09    | 2025-12-15 21:14:33 |      NULL |
+|  99 | Aditya Malhotra     | aditya.malhotra@gmail.com | Male   | 2003-11-30    | 2025-12-15 21:14:33 |      NULL |
+| 100 | Simran Kaur         | simran.kaur@gmail.com     | Female | 2005-06-14    | 2025-12-15 21:14:33 |      NULL |
+| 101 | Rahul Jain          | rahul.jain@gmail.com      | Male   | 2004-08-21    | 2025-12-15 21:14:33 |      NULL |
+| 102 | Pooja Agarwal       | pooja.agarwal@gmail.com   | Female | 2005-05-10    | 2025-12-15 21:14:33 |      NULL |
+| 103 | Vikas Yadav         | vikas.yadav@gmail.com     | Male   | 2003-10-02    | 2025-12-15 21:14:33 |      NULL |
+| 104 | Sneha Nair          | sneha.nair@gmail.com      | Female | 2004-04-27    | 2025-12-15 21:14:33 |      NULL |
+| 105 | Amit Patel          | amit.patel@gmail.com      | Male   | 2005-01-19    | 2025-12-15 21:14:33 |      NULL |
+| 106 | Kritika Arora       | kritika.arora@gmail.com   | Female | 2003-06-03    | 2025-12-15 21:14:33 |      NULL |
+| 107 | Suresh Reddy        | suresh.reddy@gmail.com    | Male   | 2004-12-25    | 2025-12-15 21:14:33 |      NULL |
+| 108 | Nisha Joshi         | nisha.joshi@gmail.com     | Female | 2005-09-09    | 2025-12-15 21:14:33 |      NULL |
+| 109 | Arjun Iyer          | arjun.iyer@gmail.com      | Male   | 2003-02-14    | 2025-12-15 21:14:33 |      NULL |
+| 110 | Ritika Bansal       | ritika.bansal@gmail.com   | Female | 2004-07-29    | 2025-12-15 21:14:33 |      NULL |
+| 111 | Manish Chawla       | manish.chawla@gmail.com   | Male   | 2005-11-06    | 2025-12-15 21:14:33 |      NULL |
+| 112 | Shreya Sengupta     | shreya.s@gmail.com        | Female | 2003-08-17    | 2025-12-15 21:14:33 |      NULL |
+| 113 | Nikhil Saxena       | nikhil.saxena@gmail.com   | Male   | 2004-01-08    | 2025-12-15 21:14:33 |      NULL |
+| 114 | Aishwarya Pillai    | aishwarya.p@gmail.com     | Female | 2005-03-31    | 2025-12-15 21:14:33 |      NULL |
+| 115 | Deepak Mishra       | deepak.mishra@gmail.com   | Male   | 2003-05-24    | 2025-12-15 21:14:33 |      NULL |
+| 116 | Isha Khanna         | isha.khanna@gmail.com     | Female | 2004-10-12    | 2025-12-15 21:14:33 |      NULL |
+| 117 | Sanjay Kulkarni     | sanjay.k@gmail.com        | Male   | 2005-07-07    | 2025-12-15 21:14:33 |      NULL |
+| 118 | Rhea Dutta          | rhea.dutta@gmail.com      | Female | 2003-09-20    | 2025-12-15 21:14:33 |      NULL |
+| 119 | Mohit Bhatia        | mohit.bhatia@gmail.com    | Male   | 2004-06-01    | 2025-12-15 21:14:33 |      NULL |
+| 120 | Kavya Menon         | kavya.menon@gmail.com     | Female | 2005-02-26    | 2025-12-15 21:14:33 |      NULL |
+| 121 | Yash Thakur         | yash.thakur@gmail.com     | Male   | 2003-12-04    | 2025-12-15 21:14:33 |      NULL |
+| 122 | Mehul Shah          | mehul.shah@gmail.com      | Male   | 2004-08-15    | 2025-12-15 21:14:33 |      NULL |
+| 123 | Tanvi Kulkarni      | tanvi.k@gmail.com         | Female | 2005-11-28    | 2025-12-15 21:14:33 |      NULL |
+| 124 | Akash Pandey        | akash.pandey@gmail.com    | Male   | 2003-04-19    | 2025-12-15 21:14:33 |      NULL |
+| 125 | Ritu Malhotra       | ritu.m@gmail.com          | Female | 2004-01-30    | 2025-12-15 21:14:33 |      NULL |
+| 126 | Varun Arora         | varun.arora@gmail.com     | Male   | 2005-06-22    | 2025-12-15 21:14:33 |      NULL |
+| 127 | Sonal Desai         | sonal.desai@gmail.com     | Female | 2003-07-13    | 2025-12-15 21:14:33 |      NULL |
+| 128 | Harsh Vardhan       | harsh.v@gmail.com         | Male   | 2004-09-02    | 2025-12-15 21:14:33 |      NULL |
+| 129 | Pallavi Joshi       | pallavi.j@gmail.com       | Female | 2005-05-16    | 2025-12-15 21:14:33 |      NULL |
+| 130 | Karan Oberoi        | karan.oberoi@gmail.com    | Male   | 2003-10-09    | 2025-12-15 21:14:33 |      NULL |
+| 131 | Mitali Roy          | mitali.roy@gmail.com      | Female | 2004-02-18    | 2025-12-15 21:14:33 |      NULL |
+| 132 | Rakesh Sinha        | rakesh.sinha@gmail.com    | Male   | 2005-12-01    | 2025-12-15 21:14:33 |      NULL |
+| 133 | Ankit Verma         | ankit.verma@gmail.com     | Male   | 2004-06-25    | 2025-12-15 21:14:33 |      NULL |
+| 134 | Divya Bhatt         | divya.bhatt@gmail.com     | Female | 2003-03-08    | 2025-12-15 21:14:33 |      NULL |
+| 135 | Rohini Rao          | rohini.rao@gmail.com      | Female | 2005-08-19    | 2025-12-15 21:14:33 |      NULL |
+| 136 | Keshav Tiwari       | keshav.tiwari@gmail.com   | Male   | 2004-11-14    | 2025-12-15 21:14:33 |      NULL |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+47 rows in set (0.00 sec)
+
+mysql> UPDATE users
+    -> SET is_active = TRUE;
+ERROR 1054 (42S22): Unknown column 'is_active' in 'field list'
+mysql> ALTER TABLE users
+    -> MODIFY COLUMN is_activ BOOLEAN
+    -> DEFAULT FALSE;
+ERROR 1054 (42S22): Unknown column 'is_activ' in 'users'
+mysql> ALTER TABLE users MODIFY COLUMN is_active BOOLEAN DEFAULT FALSE;
+ERROR 1054 (42S22): Unknown column 'is_active' in 'users'
+mysql> ALTER TABLE users
+    -> MODIFY COLUMN is_acitve BOOLEAN
+    -> DEFAULT FALSE;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> UPDATE users
+    -> SET is_active = TRUE;
+ERROR 1054 (42S22): Unknown column 'is_active' in 'field list'
+mysql> UPDATE users SET is_acitve = TRUE;
+Query OK, 47 rows affected (0.01 sec)
+Rows matched: 47  Changed: 47  Warnings: 0
+
+mysql> SELECT *
+    -> FROM users;
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+| id  | name                | email_id                  | gender | date_of_birth | created_at          | is_acitve |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+|   1 | Tushar              | tusharrbhardwaj@gmail.com | Male   | 2007-09-22    | 2025-12-15 16:33:19 |         1 |
+|   2 | Siddharth Chaudhary | amarakiyoplay@gmail.com   | Male   | 2005-04-16    | 2025-12-15 21:07:00 |         1 |
+|   3 | Naina Singh         | nain@gmail.com            | Female | 2007-09-21    | 2025-12-16 13:28:32 |         1 |
+|  93 | Aarav Sharma        | aarav.sharma@gmail.com    | Male   | 2004-01-15    | 2025-12-15 21:14:33 |         1 |
+|  94 | Ananya Verma        | ananya.verma@gmail.com    | Female | 2005-03-22    | 2025-12-15 21:14:33 |         1 |
+|  95 | Rohan Gupta         | rohan.gupta@gmail.com     | Male   | 2003-07-11    | 2025-12-15 21:14:33 |         1 |
+|  96 | Priya Mehta         | priya.mehta@gmail.com     | Female | 2004-09-05    | 2025-12-15 21:14:33 |         1 |
+|  97 | Kunal Singh         | kunal.singh@gmail.com     | Male   | 2005-12-18    | 2025-12-15 21:14:33 |         1 |
+|  98 | Neha Kapoor         | neha.kapoor@gmail.com     | Female | 2004-02-09    | 2025-12-15 21:14:33 |         1 |
+|  99 | Aditya Malhotra     | aditya.malhotra@gmail.com | Male   | 2003-11-30    | 2025-12-15 21:14:33 |         1 |
+| 100 | Simran Kaur         | simran.kaur@gmail.com     | Female | 2005-06-14    | 2025-12-15 21:14:33 |         1 |
+| 101 | Rahul Jain          | rahul.jain@gmail.com      | Male   | 2004-08-21    | 2025-12-15 21:14:33 |         1 |
+| 102 | Pooja Agarwal       | pooja.agarwal@gmail.com   | Female | 2005-05-10    | 2025-12-15 21:14:33 |         1 |
+| 103 | Vikas Yadav         | vikas.yadav@gmail.com     | Male   | 2003-10-02    | 2025-12-15 21:14:33 |         1 |
+| 104 | Sneha Nair          | sneha.nair@gmail.com      | Female | 2004-04-27    | 2025-12-15 21:14:33 |         1 |
+| 105 | Amit Patel          | amit.patel@gmail.com      | Male   | 2005-01-19    | 2025-12-15 21:14:33 |         1 |
+| 106 | Kritika Arora       | kritika.arora@gmail.com   | Female | 2003-06-03    | 2025-12-15 21:14:33 |         1 |
+| 107 | Suresh Reddy        | suresh.reddy@gmail.com    | Male   | 2004-12-25    | 2025-12-15 21:14:33 |         1 |
+| 108 | Nisha Joshi         | nisha.joshi@gmail.com     | Female | 2005-09-09    | 2025-12-15 21:14:33 |         1 |
+| 109 | Arjun Iyer          | arjun.iyer@gmail.com      | Male   | 2003-02-14    | 2025-12-15 21:14:33 |         1 |
+| 110 | Ritika Bansal       | ritika.bansal@gmail.com   | Female | 2004-07-29    | 2025-12-15 21:14:33 |         1 |
+| 111 | Manish Chawla       | manish.chawla@gmail.com   | Male   | 2005-11-06    | 2025-12-15 21:14:33 |         1 |
+| 112 | Shreya Sengupta     | shreya.s@gmail.com        | Female | 2003-08-17    | 2025-12-15 21:14:33 |         1 |
+| 113 | Nikhil Saxena       | nikhil.saxena@gmail.com   | Male   | 2004-01-08    | 2025-12-15 21:14:33 |         1 |
+| 114 | Aishwarya Pillai    | aishwarya.p@gmail.com     | Female | 2005-03-31    | 2025-12-15 21:14:33 |         1 |
+| 115 | Deepak Mishra       | deepak.mishra@gmail.com   | Male   | 2003-05-24    | 2025-12-15 21:14:33 |         1 |
+| 116 | Isha Khanna         | isha.khanna@gmail.com     | Female | 2004-10-12    | 2025-12-15 21:14:33 |         1 |
+| 117 | Sanjay Kulkarni     | sanjay.k@gmail.com        | Male   | 2005-07-07    | 2025-12-15 21:14:33 |         1 |
+| 118 | Rhea Dutta          | rhea.dutta@gmail.com      | Female | 2003-09-20    | 2025-12-15 21:14:33 |         1 |
+| 119 | Mohit Bhatia        | mohit.bhatia@gmail.com    | Male   | 2004-06-01    | 2025-12-15 21:14:33 |         1 |
+| 120 | Kavya Menon         | kavya.menon@gmail.com     | Female | 2005-02-26    | 2025-12-15 21:14:33 |         1 |
+| 121 | Yash Thakur         | yash.thakur@gmail.com     | Male   | 2003-12-04    | 2025-12-15 21:14:33 |         1 |
+| 122 | Mehul Shah          | mehul.shah@gmail.com      | Male   | 2004-08-15    | 2025-12-15 21:14:33 |         1 |
+| 123 | Tanvi Kulkarni      | tanvi.k@gmail.com         | Female | 2005-11-28    | 2025-12-15 21:14:33 |         1 |
+| 124 | Akash Pandey        | akash.pandey@gmail.com    | Male   | 2003-04-19    | 2025-12-15 21:14:33 |         1 |
+| 125 | Ritu Malhotra       | ritu.m@gmail.com          | Female | 2004-01-30    | 2025-12-15 21:14:33 |         1 |
+| 126 | Varun Arora         | varun.arora@gmail.com     | Male   | 2005-06-22    | 2025-12-15 21:14:33 |         1 |
+| 127 | Sonal Desai         | sonal.desai@gmail.com     | Female | 2003-07-13    | 2025-12-15 21:14:33 |         1 |
+| 128 | Harsh Vardhan       | harsh.v@gmail.com         | Male   | 2004-09-02    | 2025-12-15 21:14:33 |         1 |
+| 129 | Pallavi Joshi       | pallavi.j@gmail.com       | Female | 2005-05-16    | 2025-12-15 21:14:33 |         1 |
+| 130 | Karan Oberoi        | karan.oberoi@gmail.com    | Male   | 2003-10-09    | 2025-12-15 21:14:33 |         1 |
+| 131 | Mitali Roy          | mitali.roy@gmail.com      | Female | 2004-02-18    | 2025-12-15 21:14:33 |         1 |
+| 132 | Rakesh Sinha        | rakesh.sinha@gmail.com    | Male   | 2005-12-01    | 2025-12-15 21:14:33 |         1 |
+| 133 | Ankit Verma         | ankit.verma@gmail.com     | Male   | 2004-06-25    | 2025-12-15 21:14:33 |         1 |
+| 134 | Divya Bhatt         | divya.bhatt@gmail.com     | Female | 2003-03-08    | 2025-12-15 21:14:33 |         1 |
+| 135 | Rohini Rao          | rohini.rao@gmail.com      | Female | 2005-08-19    | 2025-12-15 21:14:33 |         1 |
+| 136 | Keshav Tiwari       | keshav.tiwari@gmail.com   | Male   | 2004-11-14    | 2025-12-15 21:14:33 |         1 |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+47 rows in set (0.00 sec)
+
+mysql> ALTER TABLE users
+    -> RENAME COLUMN is_acitve 
+    -> TO is_active;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE users;
++---------------+-------------------------------+------+-----+-------------------+-------------------+
+| Field         | Type                          | Null | Key | Default           | Extra             |
++---------------+-------------------------------+------+-----+-------------------+-------------------+
+| id            | int                           | NO   | PRI | NULL              | auto_increment    |
+| name          | varchar(100)                  | NO   |     | NULL              |                   |
+| email_id      | varchar(100)                  | NO   | UNI | NULL              |                   |
+| gender        | enum('Male','Female','other') | YES  |     | NULL              |                   |
+| date_of_birth | date                          | YES  |     | NULL              |                   |
+| created_at    | timestamp                     | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| is_active     | tinyint(1)                    | YES  |     | 0                 |                   |
++---------------+-------------------------------+------+-----+-------------------+-------------------+
+7 rows in set (0.01 sec)
+
+mysql> INSERT INTO users 
+    -> VALUES(4,'Aryan Tomar','tomary.yan@gmail.com','Male','22-09-2005',CURRENT_TIMESTAMP,FALSE);
+ERROR 1292 (22007): Incorrect date value: '22-09-2005' for column 'date_of_birth' at row 1
+mysql> INSERT INTO users VALUES(4,'Aryan Tomar','tomary.yan@gmail.com','Male','2005-09-22',CURRENT_TIMESTAMP,FALSE);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM users
+    -> ;
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+| id  | name                | email_id                  | gender | date_of_birth | created_at          | is_active |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+|   1 | Tushar              | tusharrbhardwaj@gmail.com | Male   | 2007-09-22    | 2025-12-15 16:33:19 |         1 |
+|   2 | Siddharth Chaudhary | amarakiyoplay@gmail.com   | Male   | 2005-04-16    | 2025-12-15 21:07:00 |         1 |
+|   3 | Naina Singh         | nain@gmail.com            | Female | 2007-09-21    | 2025-12-16 13:28:32 |         1 |
+|   4 | Aryan Tomar         | tomary.yan@gmail.com      | Male   | 2005-09-22    | 2025-12-16 14:35:11 |         0 |
+|  93 | Aarav Sharma        | aarav.sharma@gmail.com    | Male   | 2004-01-15    | 2025-12-15 21:14:33 |         1 |
+|  94 | Ananya Verma        | ananya.verma@gmail.com    | Female | 2005-03-22    | 2025-12-15 21:14:33 |         1 |
+|  95 | Rohan Gupta         | rohan.gupta@gmail.com     | Male   | 2003-07-11    | 2025-12-15 21:14:33 |         1 |
+|  96 | Priya Mehta         | priya.mehta@gmail.com     | Female | 2004-09-05    | 2025-12-15 21:14:33 |         1 |
+|  97 | Kunal Singh         | kunal.singh@gmail.com     | Male   | 2005-12-18    | 2025-12-15 21:14:33 |         1 |
+|  98 | Neha Kapoor         | neha.kapoor@gmail.com     | Female | 2004-02-09    | 2025-12-15 21:14:33 |         1 |
+|  99 | Aditya Malhotra     | aditya.malhotra@gmail.com | Male   | 2003-11-30    | 2025-12-15 21:14:33 |         1 |
+| 100 | Simran Kaur         | simran.kaur@gmail.com     | Female | 2005-06-14    | 2025-12-15 21:14:33 |         1 |
+| 101 | Rahul Jain          | rahul.jain@gmail.com      | Male   | 2004-08-21    | 2025-12-15 21:14:33 |         1 |
+| 102 | Pooja Agarwal       | pooja.agarwal@gmail.com   | Female | 2005-05-10    | 2025-12-15 21:14:33 |         1 |
+| 103 | Vikas Yadav         | vikas.yadav@gmail.com     | Male   | 2003-10-02    | 2025-12-15 21:14:33 |         1 |
+| 104 | Sneha Nair          | sneha.nair@gmail.com      | Female | 2004-04-27    | 2025-12-15 21:14:33 |         1 |
+| 105 | Amit Patel          | amit.patel@gmail.com      | Male   | 2005-01-19    | 2025-12-15 21:14:33 |         1 |
+| 106 | Kritika Arora       | kritika.arora@gmail.com   | Female | 2003-06-03    | 2025-12-15 21:14:33 |         1 |
+| 107 | Suresh Reddy        | suresh.reddy@gmail.com    | Male   | 2004-12-25    | 2025-12-15 21:14:33 |         1 |
+| 108 | Nisha Joshi         | nisha.joshi@gmail.com     | Female | 2005-09-09    | 2025-12-15 21:14:33 |         1 |
+| 109 | Arjun Iyer          | arjun.iyer@gmail.com      | Male   | 2003-02-14    | 2025-12-15 21:14:33 |         1 |
+| 110 | Ritika Bansal       | ritika.bansal@gmail.com   | Female | 2004-07-29    | 2025-12-15 21:14:33 |         1 |
+| 111 | Manish Chawla       | manish.chawla@gmail.com   | Male   | 2005-11-06    | 2025-12-15 21:14:33 |         1 |
+| 112 | Shreya Sengupta     | shreya.s@gmail.com        | Female | 2003-08-17    | 2025-12-15 21:14:33 |         1 |
+| 113 | Nikhil Saxena       | nikhil.saxena@gmail.com   | Male   | 2004-01-08    | 2025-12-15 21:14:33 |         1 |
+| 114 | Aishwarya Pillai    | aishwarya.p@gmail.com     | Female | 2005-03-31    | 2025-12-15 21:14:33 |         1 |
+| 115 | Deepak Mishra       | deepak.mishra@gmail.com   | Male   | 2003-05-24    | 2025-12-15 21:14:33 |         1 |
+| 116 | Isha Khanna         | isha.khanna@gmail.com     | Female | 2004-10-12    | 2025-12-15 21:14:33 |         1 |
+| 117 | Sanjay Kulkarni     | sanjay.k@gmail.com        | Male   | 2005-07-07    | 2025-12-15 21:14:33 |         1 |
+| 118 | Rhea Dutta          | rhea.dutta@gmail.com      | Female | 2003-09-20    | 2025-12-15 21:14:33 |         1 |
+| 119 | Mohit Bhatia        | mohit.bhatia@gmail.com    | Male   | 2004-06-01    | 2025-12-15 21:14:33 |         1 |
+| 120 | Kavya Menon         | kavya.menon@gmail.com     | Female | 2005-02-26    | 2025-12-15 21:14:33 |         1 |
+| 121 | Yash Thakur         | yash.thakur@gmail.com     | Male   | 2003-12-04    | 2025-12-15 21:14:33 |         1 |
+| 122 | Mehul Shah          | mehul.shah@gmail.com      | Male   | 2004-08-15    | 2025-12-15 21:14:33 |         1 |
+| 123 | Tanvi Kulkarni      | tanvi.k@gmail.com         | Female | 2005-11-28    | 2025-12-15 21:14:33 |         1 |
+| 124 | Akash Pandey        | akash.pandey@gmail.com    | Male   | 2003-04-19    | 2025-12-15 21:14:33 |         1 |
+| 125 | Ritu Malhotra       | ritu.m@gmail.com          | Female | 2004-01-30    | 2025-12-15 21:14:33 |         1 |
+| 126 | Varun Arora         | varun.arora@gmail.com     | Male   | 2005-06-22    | 2025-12-15 21:14:33 |         1 |
+| 127 | Sonal Desai         | sonal.desai@gmail.com     | Female | 2003-07-13    | 2025-12-15 21:14:33 |         1 |
+| 128 | Harsh Vardhan       | harsh.v@gmail.com         | Male   | 2004-09-02    | 2025-12-15 21:14:33 |         1 |
+| 129 | Pallavi Joshi       | pallavi.j@gmail.com       | Female | 2005-05-16    | 2025-12-15 21:14:33 |         1 |
+| 130 | Karan Oberoi        | karan.oberoi@gmail.com    | Male   | 2003-10-09    | 2025-12-15 21:14:33 |         1 |
+| 131 | Mitali Roy          | mitali.roy@gmail.com      | Female | 2004-02-18    | 2025-12-15 21:14:33 |         1 |
+| 132 | Rakesh Sinha        | rakesh.sinha@gmail.com    | Male   | 2005-12-01    | 2025-12-15 21:14:33 |         1 |
+| 133 | Ankit Verma         | ankit.verma@gmail.com     | Male   | 2004-06-25    | 2025-12-15 21:14:33 |         1 |
+| 134 | Divya Bhatt         | divya.bhatt@gmail.com     | Female | 2003-03-08    | 2025-12-15 21:14:33 |         1 |
+| 135 | Rohini Rao          | rohini.rao@gmail.com      | Female | 2005-08-19    | 2025-12-15 21:14:33 |         1 |
+| 136 | Keshav Tiwari       | keshav.tiwari@gmail.com   | Male   | 2004-11-14    | 2025-12-15 21:14:33 |         1 |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+48 rows in set (0.00 sec)
+
+mysql> UPDATE users
+    -> SET is_active = 0
+    -> WHERE id%2 = 0;
+Query OK, 23 rows affected (0.01 sec)
+Rows matched: 24  Changed: 23  Warnings: 0
+
+mysql> SELECT * FROM users;
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+| id  | name                | email_id                  | gender | date_of_birth | created_at          | is_active |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+|   1 | Tushar              | tusharrbhardwaj@gmail.com | Male   | 2007-09-22    | 2025-12-15 16:33:19 |         1 |
+|   2 | Siddharth Chaudhary | amarakiyoplay@gmail.com   | Male   | 2005-04-16    | 2025-12-15 21:07:00 |         0 |
+|   3 | Naina Singh         | nain@gmail.com            | Female | 2007-09-21    | 2025-12-16 13:28:32 |         1 |
+|   4 | Aryan Tomar         | tomary.yan@gmail.com      | Male   | 2005-09-22    | 2025-12-16 14:35:11 |         0 |
+|  93 | Aarav Sharma        | aarav.sharma@gmail.com    | Male   | 2004-01-15    | 2025-12-15 21:14:33 |         1 |
+|  94 | Ananya Verma        | ananya.verma@gmail.com    | Female | 2005-03-22    | 2025-12-15 21:14:33 |         0 |
+|  95 | Rohan Gupta         | rohan.gupta@gmail.com     | Male   | 2003-07-11    | 2025-12-15 21:14:33 |         1 |
+|  96 | Priya Mehta         | priya.mehta@gmail.com     | Female | 2004-09-05    | 2025-12-15 21:14:33 |         0 |
+|  97 | Kunal Singh         | kunal.singh@gmail.com     | Male   | 2005-12-18    | 2025-12-15 21:14:33 |         1 |
+|  98 | Neha Kapoor         | neha.kapoor@gmail.com     | Female | 2004-02-09    | 2025-12-15 21:14:33 |         0 |
+|  99 | Aditya Malhotra     | aditya.malhotra@gmail.com | Male   | 2003-11-30    | 2025-12-15 21:14:33 |         1 |
+| 100 | Simran Kaur         | simran.kaur@gmail.com     | Female | 2005-06-14    | 2025-12-15 21:14:33 |         0 |
+| 101 | Rahul Jain          | rahul.jain@gmail.com      | Male   | 2004-08-21    | 2025-12-15 21:14:33 |         1 |
+| 102 | Pooja Agarwal       | pooja.agarwal@gmail.com   | Female | 2005-05-10    | 2025-12-15 21:14:33 |         0 |
+| 103 | Vikas Yadav         | vikas.yadav@gmail.com     | Male   | 2003-10-02    | 2025-12-15 21:14:33 |         1 |
+| 104 | Sneha Nair          | sneha.nair@gmail.com      | Female | 2004-04-27    | 2025-12-15 21:14:33 |         0 |
+| 105 | Amit Patel          | amit.patel@gmail.com      | Male   | 2005-01-19    | 2025-12-15 21:14:33 |         1 |
+| 106 | Kritika Arora       | kritika.arora@gmail.com   | Female | 2003-06-03    | 2025-12-15 21:14:33 |         0 |
+| 107 | Suresh Reddy        | suresh.reddy@gmail.com    | Male   | 2004-12-25    | 2025-12-15 21:14:33 |         1 |
+| 108 | Nisha Joshi         | nisha.joshi@gmail.com     | Female | 2005-09-09    | 2025-12-15 21:14:33 |         0 |
+| 109 | Arjun Iyer          | arjun.iyer@gmail.com      | Male   | 2003-02-14    | 2025-12-15 21:14:33 |         1 |
+| 110 | Ritika Bansal       | ritika.bansal@gmail.com   | Female | 2004-07-29    | 2025-12-15 21:14:33 |         0 |
+| 111 | Manish Chawla       | manish.chawla@gmail.com   | Male   | 2005-11-06    | 2025-12-15 21:14:33 |         1 |
+| 112 | Shreya Sengupta     | shreya.s@gmail.com        | Female | 2003-08-17    | 2025-12-15 21:14:33 |         0 |
+| 113 | Nikhil Saxena       | nikhil.saxena@gmail.com   | Male   | 2004-01-08    | 2025-12-15 21:14:33 |         1 |
+| 114 | Aishwarya Pillai    | aishwarya.p@gmail.com     | Female | 2005-03-31    | 2025-12-15 21:14:33 |         0 |
+| 115 | Deepak Mishra       | deepak.mishra@gmail.com   | Male   | 2003-05-24    | 2025-12-15 21:14:33 |         1 |
+| 116 | Isha Khanna         | isha.khanna@gmail.com     | Female | 2004-10-12    | 2025-12-15 21:14:33 |         0 |
+| 117 | Sanjay Kulkarni     | sanjay.k@gmail.com        | Male   | 2005-07-07    | 2025-12-15 21:14:33 |         1 |
+| 118 | Rhea Dutta          | rhea.dutta@gmail.com      | Female | 2003-09-20    | 2025-12-15 21:14:33 |         0 |
+| 119 | Mohit Bhatia        | mohit.bhatia@gmail.com    | Male   | 2004-06-01    | 2025-12-15 21:14:33 |         1 |
+| 120 | Kavya Menon         | kavya.menon@gmail.com     | Female | 2005-02-26    | 2025-12-15 21:14:33 |         0 |
+| 121 | Yash Thakur         | yash.thakur@gmail.com     | Male   | 2003-12-04    | 2025-12-15 21:14:33 |         1 |
+| 122 | Mehul Shah          | mehul.shah@gmail.com      | Male   | 2004-08-15    | 2025-12-15 21:14:33 |         0 |
+| 123 | Tanvi Kulkarni      | tanvi.k@gmail.com         | Female | 2005-11-28    | 2025-12-15 21:14:33 |         1 |
+| 124 | Akash Pandey        | akash.pandey@gmail.com    | Male   | 2003-04-19    | 2025-12-15 21:14:33 |         0 |
+| 125 | Ritu Malhotra       | ritu.m@gmail.com          | Female | 2004-01-30    | 2025-12-15 21:14:33 |         1 |
+| 126 | Varun Arora         | varun.arora@gmail.com     | Male   | 2005-06-22    | 2025-12-15 21:14:33 |         0 |
+| 127 | Sonal Desai         | sonal.desai@gmail.com     | Female | 2003-07-13    | 2025-12-15 21:14:33 |         1 |
+| 128 | Harsh Vardhan       | harsh.v@gmail.com         | Male   | 2004-09-02    | 2025-12-15 21:14:33 |         0 |
+| 129 | Pallavi Joshi       | pallavi.j@gmail.com       | Female | 2005-05-16    | 2025-12-15 21:14:33 |         1 |
+| 130 | Karan Oberoi        | karan.oberoi@gmail.com    | Male   | 2003-10-09    | 2025-12-15 21:14:33 |         0 |
+| 131 | Mitali Roy          | mitali.roy@gmail.com      | Female | 2004-02-18    | 2025-12-15 21:14:33 |         1 |
+| 132 | Rakesh Sinha        | rakesh.sinha@gmail.com    | Male   | 2005-12-01    | 2025-12-15 21:14:33 |         0 |
+| 133 | Ankit Verma         | ankit.verma@gmail.com     | Male   | 2004-06-25    | 2025-12-15 21:14:33 |         1 |
+| 134 | Divya Bhatt         | divya.bhatt@gmail.com     | Female | 2003-03-08    | 2025-12-15 21:14:33 |         0 |
+| 135 | Rohini Rao          | rohini.rao@gmail.com      | Female | 2005-08-19    | 2025-12-15 21:14:33 |         1 |
+| 136 | Keshav Tiwari       | keshav.tiwari@gmail.com   | Male   | 2004-11-14    | 2025-12-15 21:14:33 |         0 |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+48 rows in set (0.00 sec)
+
+mysql> UPDATE users
+    -> SET is_active = 0
+    -> WHERE id > 129;;
+Query OK, 3 rows affected (0.00 sec)
+Rows matched: 7  Changed: 3  Warnings: 0
+
+ERROR: 
+No query specified
+
+mysql> SELECT * FROM users;
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+| id  | name                | email_id                  | gender | date_of_birth | created_at          | is_active |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+|   1 | Tushar              | tusharrbhardwaj@gmail.com | Male   | 2007-09-22    | 2025-12-15 16:33:19 |         1 |
+|   2 | Siddharth Chaudhary | amarakiyoplay@gmail.com   | Male   | 2005-04-16    | 2025-12-15 21:07:00 |         0 |
+|   3 | Naina Singh         | nain@gmail.com            | Female | 2007-09-21    | 2025-12-16 13:28:32 |         1 |
+|   4 | Aryan Tomar         | tomary.yan@gmail.com      | Male   | 2005-09-22    | 2025-12-16 14:35:11 |         0 |
+|  93 | Aarav Sharma        | aarav.sharma@gmail.com    | Male   | 2004-01-15    | 2025-12-15 21:14:33 |         1 |
+|  94 | Ananya Verma        | ananya.verma@gmail.com    | Female | 2005-03-22    | 2025-12-15 21:14:33 |         0 |
+|  95 | Rohan Gupta         | rohan.gupta@gmail.com     | Male   | 2003-07-11    | 2025-12-15 21:14:33 |         1 |
+|  96 | Priya Mehta         | priya.mehta@gmail.com     | Female | 2004-09-05    | 2025-12-15 21:14:33 |         0 |
+|  97 | Kunal Singh         | kunal.singh@gmail.com     | Male   | 2005-12-18    | 2025-12-15 21:14:33 |         1 |
+|  98 | Neha Kapoor         | neha.kapoor@gmail.com     | Female | 2004-02-09    | 2025-12-15 21:14:33 |         0 |
+|  99 | Aditya Malhotra     | aditya.malhotra@gmail.com | Male   | 2003-11-30    | 2025-12-15 21:14:33 |         1 |
+| 100 | Simran Kaur         | simran.kaur@gmail.com     | Female | 2005-06-14    | 2025-12-15 21:14:33 |         0 |
+| 101 | Rahul Jain          | rahul.jain@gmail.com      | Male   | 2004-08-21    | 2025-12-15 21:14:33 |         1 |
+| 102 | Pooja Agarwal       | pooja.agarwal@gmail.com   | Female | 2005-05-10    | 2025-12-15 21:14:33 |         0 |
+| 103 | Vikas Yadav         | vikas.yadav@gmail.com     | Male   | 2003-10-02    | 2025-12-15 21:14:33 |         1 |
+| 104 | Sneha Nair          | sneha.nair@gmail.com      | Female | 2004-04-27    | 2025-12-15 21:14:33 |         0 |
+| 105 | Amit Patel          | amit.patel@gmail.com      | Male   | 2005-01-19    | 2025-12-15 21:14:33 |         1 |
+| 106 | Kritika Arora       | kritika.arora@gmail.com   | Female | 2003-06-03    | 2025-12-15 21:14:33 |         0 |
+| 107 | Suresh Reddy        | suresh.reddy@gmail.com    | Male   | 2004-12-25    | 2025-12-15 21:14:33 |         1 |
+| 108 | Nisha Joshi         | nisha.joshi@gmail.com     | Female | 2005-09-09    | 2025-12-15 21:14:33 |         0 |
+| 109 | Arjun Iyer          | arjun.iyer@gmail.com      | Male   | 2003-02-14    | 2025-12-15 21:14:33 |         1 |
+| 110 | Ritika Bansal       | ritika.bansal@gmail.com   | Female | 2004-07-29    | 2025-12-15 21:14:33 |         0 |
+| 111 | Manish Chawla       | manish.chawla@gmail.com   | Male   | 2005-11-06    | 2025-12-15 21:14:33 |         1 |
+| 112 | Shreya Sengupta     | shreya.s@gmail.com        | Female | 2003-08-17    | 2025-12-15 21:14:33 |         0 |
+| 113 | Nikhil Saxena       | nikhil.saxena@gmail.com   | Male   | 2004-01-08    | 2025-12-15 21:14:33 |         1 |
+| 114 | Aishwarya Pillai    | aishwarya.p@gmail.com     | Female | 2005-03-31    | 2025-12-15 21:14:33 |         0 |
+| 115 | Deepak Mishra       | deepak.mishra@gmail.com   | Male   | 2003-05-24    | 2025-12-15 21:14:33 |         1 |
+| 116 | Isha Khanna         | isha.khanna@gmail.com     | Female | 2004-10-12    | 2025-12-15 21:14:33 |         0 |
+| 117 | Sanjay Kulkarni     | sanjay.k@gmail.com        | Male   | 2005-07-07    | 2025-12-15 21:14:33 |         1 |
+| 118 | Rhea Dutta          | rhea.dutta@gmail.com      | Female | 2003-09-20    | 2025-12-15 21:14:33 |         0 |
+| 119 | Mohit Bhatia        | mohit.bhatia@gmail.com    | Male   | 2004-06-01    | 2025-12-15 21:14:33 |         1 |
+| 120 | Kavya Menon         | kavya.menon@gmail.com     | Female | 2005-02-26    | 2025-12-15 21:14:33 |         0 |
+| 121 | Yash Thakur         | yash.thakur@gmail.com     | Male   | 2003-12-04    | 2025-12-15 21:14:33 |         1 |
+| 122 | Mehul Shah          | mehul.shah@gmail.com      | Male   | 2004-08-15    | 2025-12-15 21:14:33 |         0 |
+| 123 | Tanvi Kulkarni      | tanvi.k@gmail.com         | Female | 2005-11-28    | 2025-12-15 21:14:33 |         1 |
+| 124 | Akash Pandey        | akash.pandey@gmail.com    | Male   | 2003-04-19    | 2025-12-15 21:14:33 |         0 |
+| 125 | Ritu Malhotra       | ritu.m@gmail.com          | Female | 2004-01-30    | 2025-12-15 21:14:33 |         1 |
+| 126 | Varun Arora         | varun.arora@gmail.com     | Male   | 2005-06-22    | 2025-12-15 21:14:33 |         0 |
+| 127 | Sonal Desai         | sonal.desai@gmail.com     | Female | 2003-07-13    | 2025-12-15 21:14:33 |         1 |
+| 128 | Harsh Vardhan       | harsh.v@gmail.com         | Male   | 2004-09-02    | 2025-12-15 21:14:33 |         0 |
+| 129 | Pallavi Joshi       | pallavi.j@gmail.com       | Female | 2005-05-16    | 2025-12-15 21:14:33 |         1 |
+| 130 | Karan Oberoi        | karan.oberoi@gmail.com    | Male   | 2003-10-09    | 2025-12-15 21:14:33 |         0 |
+| 131 | Mitali Roy          | mitali.roy@gmail.com      | Female | 2004-02-18    | 2025-12-15 21:14:33 |         0 |
+| 132 | Rakesh Sinha        | rakesh.sinha@gmail.com    | Male   | 2005-12-01    | 2025-12-15 21:14:33 |         0 |
+| 133 | Ankit Verma         | ankit.verma@gmail.com     | Male   | 2004-06-25    | 2025-12-15 21:14:33 |         0 |
+| 134 | Divya Bhatt         | divya.bhatt@gmail.com     | Female | 2003-03-08    | 2025-12-15 21:14:33 |         0 |
+| 135 | Rohini Rao          | rohini.rao@gmail.com      | Female | 2005-08-19    | 2025-12-15 21:14:33 |         0 |
+| 136 | Keshav Tiwari       | keshav.tiwari@gmail.com   | Male   | 2004-11-14    | 2025-12-15 21:14:33 |         0 |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+48 rows in set (0.00 sec)
+
+mysql> UPDATE users
+    -> SET is_active = 0 
+    -> WHERE id BETWEEN 100 AND 120;
+Query OK, 10 rows affected (0.00 sec)
+Rows matched: 21  Changed: 10  Warnings: 0
+
+mysql> SELECT * FROM users;
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+| id  | name                | email_id                  | gender | date_of_birth | created_at          | is_active |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+|   1 | Tushar              | tusharrbhardwaj@gmail.com | Male   | 2007-09-22    | 2025-12-15 16:33:19 |         1 |
+|   2 | Siddharth Chaudhary | amarakiyoplay@gmail.com   | Male   | 2005-04-16    | 2025-12-15 21:07:00 |         0 |
+|   3 | Naina Singh         | nain@gmail.com            | Female | 2007-09-21    | 2025-12-16 13:28:32 |         1 |
+|   4 | Aryan Tomar         | tomary.yan@gmail.com      | Male   | 2005-09-22    | 2025-12-16 14:35:11 |         0 |
+|  93 | Aarav Sharma        | aarav.sharma@gmail.com    | Male   | 2004-01-15    | 2025-12-15 21:14:33 |         1 |
+|  94 | Ananya Verma        | ananya.verma@gmail.com    | Female | 2005-03-22    | 2025-12-15 21:14:33 |         0 |
+|  95 | Rohan Gupta         | rohan.gupta@gmail.com     | Male   | 2003-07-11    | 2025-12-15 21:14:33 |         1 |
+|  96 | Priya Mehta         | priya.mehta@gmail.com     | Female | 2004-09-05    | 2025-12-15 21:14:33 |         0 |
+|  97 | Kunal Singh         | kunal.singh@gmail.com     | Male   | 2005-12-18    | 2025-12-15 21:14:33 |         1 |
+|  98 | Neha Kapoor         | neha.kapoor@gmail.com     | Female | 2004-02-09    | 2025-12-15 21:14:33 |         0 |
+|  99 | Aditya Malhotra     | aditya.malhotra@gmail.com | Male   | 2003-11-30    | 2025-12-15 21:14:33 |         1 |
+| 100 | Simran Kaur         | simran.kaur@gmail.com     | Female | 2005-06-14    | 2025-12-15 21:14:33 |         0 |
+| 101 | Rahul Jain          | rahul.jain@gmail.com      | Male   | 2004-08-21    | 2025-12-15 21:14:33 |         0 |
+| 102 | Pooja Agarwal       | pooja.agarwal@gmail.com   | Female | 2005-05-10    | 2025-12-15 21:14:33 |         0 |
+| 103 | Vikas Yadav         | vikas.yadav@gmail.com     | Male   | 2003-10-02    | 2025-12-15 21:14:33 |         0 |
+| 104 | Sneha Nair          | sneha.nair@gmail.com      | Female | 2004-04-27    | 2025-12-15 21:14:33 |         0 |
+| 105 | Amit Patel          | amit.patel@gmail.com      | Male   | 2005-01-19    | 2025-12-15 21:14:33 |         0 |
+| 106 | Kritika Arora       | kritika.arora@gmail.com   | Female | 2003-06-03    | 2025-12-15 21:14:33 |         0 |
+| 107 | Suresh Reddy        | suresh.reddy@gmail.com    | Male   | 2004-12-25    | 2025-12-15 21:14:33 |         0 |
+| 108 | Nisha Joshi         | nisha.joshi@gmail.com     | Female | 2005-09-09    | 2025-12-15 21:14:33 |         0 |
+| 109 | Arjun Iyer          | arjun.iyer@gmail.com      | Male   | 2003-02-14    | 2025-12-15 21:14:33 |         0 |
+| 110 | Ritika Bansal       | ritika.bansal@gmail.com   | Female | 2004-07-29    | 2025-12-15 21:14:33 |         0 |
+| 111 | Manish Chawla       | manish.chawla@gmail.com   | Male   | 2005-11-06    | 2025-12-15 21:14:33 |         0 |
+| 112 | Shreya Sengupta     | shreya.s@gmail.com        | Female | 2003-08-17    | 2025-12-15 21:14:33 |         0 |
+| 113 | Nikhil Saxena       | nikhil.saxena@gmail.com   | Male   | 2004-01-08    | 2025-12-15 21:14:33 |         0 |
+| 114 | Aishwarya Pillai    | aishwarya.p@gmail.com     | Female | 2005-03-31    | 2025-12-15 21:14:33 |         0 |
+| 115 | Deepak Mishra       | deepak.mishra@gmail.com   | Male   | 2003-05-24    | 2025-12-15 21:14:33 |         0 |
+| 116 | Isha Khanna         | isha.khanna@gmail.com     | Female | 2004-10-12    | 2025-12-15 21:14:33 |         0 |
+| 117 | Sanjay Kulkarni     | sanjay.k@gmail.com        | Male   | 2005-07-07    | 2025-12-15 21:14:33 |         0 |
+| 118 | Rhea Dutta          | rhea.dutta@gmail.com      | Female | 2003-09-20    | 2025-12-15 21:14:33 |         0 |
+| 119 | Mohit Bhatia        | mohit.bhatia@gmail.com    | Male   | 2004-06-01    | 2025-12-15 21:14:33 |         0 |
+| 120 | Kavya Menon         | kavya.menon@gmail.com     | Female | 2005-02-26    | 2025-12-15 21:14:33 |         0 |
+| 121 | Yash Thakur         | yash.thakur@gmail.com     | Male   | 2003-12-04    | 2025-12-15 21:14:33 |         1 |
+| 122 | Mehul Shah          | mehul.shah@gmail.com      | Male   | 2004-08-15    | 2025-12-15 21:14:33 |         0 |
+| 123 | Tanvi Kulkarni      | tanvi.k@gmail.com         | Female | 2005-11-28    | 2025-12-15 21:14:33 |         1 |
+| 124 | Akash Pandey        | akash.pandey@gmail.com    | Male   | 2003-04-19    | 2025-12-15 21:14:33 |         0 |
+| 125 | Ritu Malhotra       | ritu.m@gmail.com          | Female | 2004-01-30    | 2025-12-15 21:14:33 |         1 |
+| 126 | Varun Arora         | varun.arora@gmail.com     | Male   | 2005-06-22    | 2025-12-15 21:14:33 |         0 |
+| 127 | Sonal Desai         | sonal.desai@gmail.com     | Female | 2003-07-13    | 2025-12-15 21:14:33 |         1 |
+| 128 | Harsh Vardhan       | harsh.v@gmail.com         | Male   | 2004-09-02    | 2025-12-15 21:14:33 |         0 |
+| 129 | Pallavi Joshi       | pallavi.j@gmail.com       | Female | 2005-05-16    | 2025-12-15 21:14:33 |         1 |
+| 130 | Karan Oberoi        | karan.oberoi@gmail.com    | Male   | 2003-10-09    | 2025-12-15 21:14:33 |         0 |
+| 131 | Mitali Roy          | mitali.roy@gmail.com      | Female | 2004-02-18    | 2025-12-15 21:14:33 |         0 |
+| 132 | Rakesh Sinha        | rakesh.sinha@gmail.com    | Male   | 2005-12-01    | 2025-12-15 21:14:33 |         0 |
+| 133 | Ankit Verma         | ankit.verma@gmail.com     | Male   | 2004-06-25    | 2025-12-15 21:14:33 |         0 |
+| 134 | Divya Bhatt         | divya.bhatt@gmail.com     | Female | 2003-03-08    | 2025-12-15 21:14:33 |         0 |
+| 135 | Rohini Rao          | rohini.rao@gmail.com      | Female | 2005-08-19    | 2025-12-15 21:14:33 |         0 |
+| 136 | Keshav Tiwari       | keshav.tiwari@gmail.com   | Male   | 2004-11-14    | 2025-12-15 21:14:33 |         0 |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+
+48 rows in set (0.00 sec)
+
+mysql> UPDATE users
+    -> SET name = 'Tushar Bhardwaj'
+    -> WHERE name = 'Tushar';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM users
+    -> WHERE name LIKE 'TUSHAR%';
++----+-----------------+---------------------------+--------+---------------+---------------------+-----------+
+| id | name            | email_id                  | gender | date_of_birth | created_at          | is_active |
++----+-----------------+---------------------------+--------+---------------+---------------------+-----------+
+|  1 | Tushar Bhardwaj | tusharrbhardwaj@gmail.com | Male   | 2007-09-22    | 2025-12-15 16:33:19 |         1 |
++----+-----------------+---------------------------+--------+---------------+---------------------+-----------+
+1 row in set (0.01 sec)
+
+mysql> ALTER TABLE users
+    -> ADD COLUMN
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
+mysql> CREATE TABLE users_salary(
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> ALTER TABLE users
+    -> ADD COLUMN salary BIGINT DEFAULT 30000;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> UPDATE users
+    -> SET salary = 20000 
+    -> WHERE id%2 = 0;
+Query OK, 24 rows affected (0.01 sec)
+Rows matched: 24  Changed: 24  Warnings: 0
+
+mysql> UPDATE users SET salary = 20000 WHERE id%2 != 0;
+Query OK, 24 rows affected (0.01 sec)
+Rows matched: 24  Changed: 24  Warnings: 0
+
+mysql> UPDATE users SET salary = 50000 WHERE id%2 != 0;
+Query OK, 24 rows affected (0.00 sec)
+Rows matched: 24  Changed: 24  Warnings: 0
+
+mysql> SELECT * FROM users
+    -> ;
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+--------+
+| id  | name                | email_id                  | gender | date_of_birth | created_at          | is_active | salary |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+--------+
+|   1 | Tushar Bhardwaj     | tusharrbhardwaj@gmail.com | Male   | 2007-09-22    | 2025-12-15 16:33:19 |         1 |  50000 |
+|   2 | Siddharth Chaudhary | amarakiyoplay@gmail.com   | Male   | 2005-04-16    | 2025-12-15 21:07:00 |         0 |  20000 |
+|   3 | Naina Singh         | nain@gmail.com            | Female | 2007-09-21    | 2025-12-16 13:28:32 |         1 |  50000 |
+|   4 | Aryan Tomar         | tomary.yan@gmail.com      | Male   | 2005-09-22    | 2025-12-16 14:35:11 |         0 |  20000 |
+|  93 | Aarav Sharma        | aarav.sharma@gmail.com    | Male   | 2004-01-15    | 2025-12-15 21:14:33 |         1 |  50000 |
+|  94 | Ananya Verma        | ananya.verma@gmail.com    | Female | 2005-03-22    | 2025-12-15 21:14:33 |         0 |  20000 |
+|  95 | Rohan Gupta         | rohan.gupta@gmail.com     | Male   | 2003-07-11    | 2025-12-15 21:14:33 |         1 |  50000 |
+|  96 | Priya Mehta         | priya.mehta@gmail.com     | Female | 2004-09-05    | 2025-12-15 21:14:33 |         0 |  20000 |
+|  97 | Kunal Singh         | kunal.singh@gmail.com     | Male   | 2005-12-18    | 2025-12-15 21:14:33 |         1 |  50000 |
+|  98 | Neha Kapoor         | neha.kapoor@gmail.com     | Female | 2004-02-09    | 2025-12-15 21:14:33 |         0 |  20000 |
+|  99 | Aditya Malhotra     | aditya.malhotra@gmail.com | Male   | 2003-11-30    | 2025-12-15 21:14:33 |         1 |  50000 |
+| 100 | Simran Kaur         | simran.kaur@gmail.com     | Female | 2005-06-14    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 101 | Rahul Jain          | rahul.jain@gmail.com      | Male   | 2004-08-21    | 2025-12-15 21:14:33 |         0 |  50000 |
+| 102 | Pooja Agarwal       | pooja.agarwal@gmail.com   | Female | 2005-05-10    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 103 | Vikas Yadav         | vikas.yadav@gmail.com     | Male   | 2003-10-02    | 2025-12-15 21:14:33 |         0 |  50000 |
+| 104 | Sneha Nair          | sneha.nair@gmail.com      | Female | 2004-04-27    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 105 | Amit Patel          | amit.patel@gmail.com      | Male   | 2005-01-19    | 2025-12-15 21:14:33 |         0 |  50000 |
+| 106 | Kritika Arora       | kritika.arora@gmail.com   | Female | 2003-06-03    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 107 | Suresh Reddy        | suresh.reddy@gmail.com    | Male   | 2004-12-25    | 2025-12-15 21:14:33 |         0 |  50000 |
+| 108 | Nisha Joshi         | nisha.joshi@gmail.com     | Female | 2005-09-09    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 109 | Arjun Iyer          | arjun.iyer@gmail.com      | Male   | 2003-02-14    | 2025-12-15 21:14:33 |         0 |  50000 |
+| 110 | Ritika Bansal       | ritika.bansal@gmail.com   | Female | 2004-07-29    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 111 | Manish Chawla       | manish.chawla@gmail.com   | Male   | 2005-11-06    | 2025-12-15 21:14:33 |         0 |  50000 |
+| 112 | Shreya Sengupta     | shreya.s@gmail.com        | Female | 2003-08-17    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 113 | Nikhil Saxena       | nikhil.saxena@gmail.com   | Male   | 2004-01-08    | 2025-12-15 21:14:33 |         0 |  50000 |
+| 114 | Aishwarya Pillai    | aishwarya.p@gmail.com     | Female | 2005-03-31    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 115 | Deepak Mishra       | deepak.mishra@gmail.com   | Male   | 2003-05-24    | 2025-12-15 21:14:33 |         0 |  50000 |
+| 116 | Isha Khanna         | isha.khanna@gmail.com     | Female | 2004-10-12    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 117 | Sanjay Kulkarni     | sanjay.k@gmail.com        | Male   | 2005-07-07    | 2025-12-15 21:14:33 |         0 |  50000 |
+| 118 | Rhea Dutta          | rhea.dutta@gmail.com      | Female | 2003-09-20    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 119 | Mohit Bhatia        | mohit.bhatia@gmail.com    | Male   | 2004-06-01    | 2025-12-15 21:14:33 |         0 |  50000 |
+| 120 | Kavya Menon         | kavya.menon@gmail.com     | Female | 2005-02-26    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 121 | Yash Thakur         | yash.thakur@gmail.com     | Male   | 2003-12-04    | 2025-12-15 21:14:33 |         1 |  50000 |
+| 122 | Mehul Shah          | mehul.shah@gmail.com      | Male   | 2004-08-15    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 123 | Tanvi Kulkarni      | tanvi.k@gmail.com         | Female | 2005-11-28    | 2025-12-15 21:14:33 |         1 |  50000 |
+| 124 | Akash Pandey        | akash.pandey@gmail.com    | Male   | 2003-04-19    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 125 | Ritu Malhotra       | ritu.m@gmail.com          | Female | 2004-01-30    | 2025-12-15 21:14:33 |         1 |  50000 |
+| 126 | Varun Arora         | varun.arora@gmail.com     | Male   | 2005-06-22    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 127 | Sonal Desai         | sonal.desai@gmail.com     | Female | 2003-07-13    | 2025-12-15 21:14:33 |         1 |  50000 |
+| 128 | Harsh Vardhan       | harsh.v@gmail.com         | Male   | 2004-09-02    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 129 | Pallavi Joshi       | pallavi.j@gmail.com       | Female | 2005-05-16    | 2025-12-15 21:14:33 |         1 |  50000 |
+| 130 | Karan Oberoi        | karan.oberoi@gmail.com    | Male   | 2003-10-09    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 131 | Mitali Roy          | mitali.roy@gmail.com      | Female | 2004-02-18    | 2025-12-15 21:14:33 |         0 |  50000 |
+| 132 | Rakesh Sinha        | rakesh.sinha@gmail.com    | Male   | 2005-12-01    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 133 | Ankit Verma         | ankit.verma@gmail.com     | Male   | 2004-06-25    | 2025-12-15 21:14:33 |         0 |  50000 |
+| 134 | Divya Bhatt         | divya.bhatt@gmail.com     | Female | 2003-03-08    | 2025-12-15 21:14:33 |         0 |  20000 |
+| 135 | Rohini Rao          | rohini.rao@gmail.com      | Female | 2005-08-19    | 2025-12-15 21:14:33 |         0 |  50000 |
+| 136 | Keshav Tiwari       | keshav.tiwari@gmail.com   | Male   | 2004-11-14    | 2025-12-15 21:14:33 |         0 |  20000 |
++-----+---------------------+---------------------------+--------+---------------+---------------------+-----------+--------+
+48 rows in set (0.00 sec)
+
+mysql> UPDATE users
+    -> SET salary = 70000
+    -> WHERE id = 1;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE users
+    -> SET name = 'Aryan Pratap Singh Tomar'
+    -> Where name LIKE 'Aryan%';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE users
+    -> SET salary = salary + 10000
+    -> WHERE salary<60000;
+Query OK, 47 rows affected (0.01 sec)
+Rows matched: 47  Changed: 47  Warnings: 0
+
+mysql> UPDATE users
+    -> SET gender = 'other'
+    -> WHERE name LIKE 'Siddharth%';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM users LIMIT 10;
++----+--------------------------+---------------------------+--------+---------------+---------------------+-----------+--------+
+| id | name                     | email_id                  | gender | date_of_birth | created_at          | is_active | salary |
++----+--------------------------+---------------------------+--------+---------------+---------------------+-----------+--------+
+|  1 | Tushar Bhardwaj          | tusharrbhardwaj@gmail.com | Male   | 2007-09-22    | 2025-12-15 16:33:19 |         1 |  70000 |
+|  2 | Siddharth Chaudhary      | amarakiyoplay@gmail.com   | other  | 2005-04-16    | 2025-12-15 21:07:00 |         0 |  30000 |
+|  3 | Naina Singh              | nain@gmail.com            | Female | 2007-09-21    | 2025-12-16 13:28:32 |         1 |  60000 |
+|  4 | Aryan Pratap Singh Tomar | tomary.yan@gmail.com      | Male   | 2005-09-22    | 2025-12-16 14:35:11 |         0 |  30000 |
+| 93 | Aarav Sharma             | aarav.sharma@gmail.com    | Male   | 2004-01-15    | 2025-12-15 21:14:33 |         1 |  60000 |
+| 94 | Ananya Verma             | ananya.verma@gmail.com    | Female | 2005-03-22    | 2025-12-15 21:14:33 |         0 |  30000 |
+| 95 | Rohan Gupta              | rohan.gupta@gmail.com     | Male   | 2003-07-11    | 2025-12-15 21:14:33 |         1 |  60000 |
+| 96 | Priya Mehta              | priya.mehta@gmail.com     | Female | 2004-09-05    | 2025-12-15 21:14:33 |         0 |  30000 |
+| 97 | Kunal Singh              | kunal.singh@gmail.com     | Male   | 2005-12-18    | 2025-12-15 21:14:33 |         1 |  60000 |
+| 98 | Neha Kapoor              | neha.kapoor@gmail.com     | Female | 2004-02-09    | 2025-12-15 21:14:33 |         0 |  30000 |
++----+--------------------------+---------------------------+--------+---------------+---------------------+-----------+--------+
+10 rows in set (0.00 sec)
+
+mysql> UPDATE users
+    -> SET salary = NULL
+    -> WHERE ud = 93;
+ERROR 1054 (42S22): Unknown column 'ud' in 'where clause'
+mysql> UPDATE users SET salary = NULL WHERE id = 93;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> DELETE FROM users
+    -> WHERE salary IS NULL;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM users
+    -> WHERE id = 93;
+Empty set (0.00 sec)
+
+mysql> DESCRIBE users;
++---------------+-------------------------------+------+-----+-------------------+-------------------+
+| Field         | Type                          | Null | Key | Default           | Extra             |
++---------------+-------------------------------+------+-----+-------------------+-------------------+
+| id            | int                           | NO   | PRI | NULL              | auto_increment    |
+| name          | varchar(100)                  | NO   |     | NULL              |                   |
+| email_id      | varchar(100)                  | NO   | UNI | NULL              |                   |
+| gender        | enum('Male','Female','other') | YES  |     | NULL              |                   |
+| date_of_birth | date                          | YES  |     | NULL              |                   |
+| created_at    | timestamp                     | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| is_active     | tinyint(1)                    | YES  |     | 0                 |                   |
+| salary        | bigint                        | YES  |     | 30000             |                   |
++---------------+-------------------------------+------+-----+-------------------+-------------------+
+8 rows in set (0.00 sec)
+
+mysql> ALTER TABLE users
+    -> ADD CONSTARINT id UNIQUE (id);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id UNIQUE (id)' at line 2
+mysql> ALTER TABLE users ADD CONSTARINT id UNIQUE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id UNIQUE' at line 1
+mysql> ALTER TABLE users
+    -> ADD CONSTRAINT unique_id UNIQUE (id);
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE users;
++---------------+-------------------------------+------+-----+-------------------+-------------------+
+| Field         | Type                          | Null | Key | Default           | Extra             |
++---------------+-------------------------------+------+-----+-------------------+-------------------+
+| id            | int                           | NO   | PRI | NULL              | auto_increment    |
+| name          | varchar(100)                  | NO   |     | NULL              |                   |
+| email_id      | varchar(100)                  | NO   | UNI | NULL              |                   |
+| gender        | enum('Male','Female','other') | YES  |     | NULL              |                   |
+| date_of_birth | date                          | YES  |     | NULL              |                   |
+| created_at    | timestamp                     | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| is_active     | tinyint(1)                    | YES  |     | 0                 |                   |
+| salary        | bigint                        | YES  |     | 30000             |                   |
++---------------+-------------------------------+------+-----+-------------------+-------------------+
+8 rows in set (0.00 sec)
+
+mysql> ALTER TABLE users
+    -> ADD CONSTRAINT chk_age CHECK (date_of_birth < '2007-01-01');
+ERROR 3819 (HY000): Check constraint 'chk_age' is violated.
+mysql> ALTER TABLE users
+    -> ADD COLUMN age INT(10) AFTER gender;
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+mysql> UPDATE users
+    -> SET age = date_of_birth - CURRENT_DATE;
+Query OK, 47 rows affected (0.00 sec)
+Rows matched: 47  Changed: 47  Warnings: 0
+
+mysql> SELECT name,age FROM users;
++--------------------------+---------+
+| name                     | age     |
++--------------------------+---------+
+| Tushar Bhardwaj          | -180294 |
+| Siddharth Chaudhary      | -200800 |
+| Naina Singh              | -180295 |
+| Aryan Pratap Singh Tomar | -200294 |
+| Ananya Verma             | -200894 |
+| Rohan Gupta              | -220505 |
+| Priya Mehta              | -210311 |
+| Kunal Singh              | -199998 |
+| Neha Kapoor              | -211007 |
+| Aditya Malhotra          | -220086 |
+| Simran Kaur              | -200602 |
+| Rahul Jain               | -210395 |
+| Pooja Agarwal            | -200706 |
+| Vikas Yadav              | -220214 |
+| Sneha Nair               | -210789 |
+| Amit Patel               | -201097 |
+| Kritika Arora            | -220613 |
+| Suresh Reddy             | -209991 |
+| Nisha Joshi              | -200307 |
+| Arjun Iyer               | -221002 |
+| Ritika Bansal            | -210487 |
+| Manish Chawla            | -200110 |
+| Shreya Sengupta          | -220399 |
+| Nikhil Saxena            | -211108 |
+| Aishwarya Pillai         | -200885 |
+| Deepak Mishra            | -220692 |
+| Isha Khanna              | -210204 |
+| Sanjay Kulkarni          | -200509 |
+| Rhea Dutta               | -220296 |
+| Mohit Bhatia             | -210615 |
+| Kavya Menon              | -200990 |
+| Yash Thakur              | -220012 |
+| Mehul Shah               | -210401 |
+| Tanvi Kulkarni           | -200088 |
+| Akash Pandey             | -220797 |
+| Ritu Malhotra            | -211086 |
+| Varun Arora              | -200594 |
+| Sonal Desai              | -220503 |
+| Harsh Vardhan            | -210314 |
+| Pallavi Joshi            | -200700 |
+| Karan Oberoi             | -220207 |
+| Mitali Roy               | -210998 |
+| Rakesh Sinha             | -200015 |
+| Ankit Verma              | -210591 |
+| Divya Bhatt              | -220908 |
+| Rohini Rao               | -200397 |
+| Keshav Tiwari            | -210102 |
++--------------------------+---------+
+47 rows in set (0.00 sec)
+
+mysql> DROP age from users;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'age from users' at line 1
+mysql> DROP age FROM users;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'age FROM users' at line 1
+mysql> DROP COLUMN age FROM users;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'COLUMN age FROM users' at line 1
+mysql> DELETE age FROM users;
+ERROR 1109 (42S02): Unknown table 'age' in MULTI DELETE
+mysql> ALTER TABLE users
+    -> DROP age
+    -> ;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE users;
++---------------+-------------------------------+------+-----+-------------------+-------------------+
+| Field         | Type                          | Null | Key | Default           | Extra             |
++---------------+-------------------------------+------+-----+-------------------+-------------------+
+| id            | int                           | NO   | PRI | NULL              | auto_increment    |
+| name          | varchar(100)                  | NO   |     | NULL              |                   |
+| email_id      | varchar(100)                  | NO   | UNI | NULL              |                   |
+| gender        | enum('Male','Female','other') | YES  |     | NULL              |                   |
+| date_of_birth | date                          | YES  |     | NULL              |                   |
+| created_at    | timestamp                     | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| is_active     | tinyint(1)                    | YES  |     | 0                 |                   |
+| salary        | bigint                        | YES  |     | 30000             |                   |
++---------------+-------------------------------+------+-----+-------------------+-------------------+
+8 rows in set (0.01 sec)
+
+mysql> ALTER TABLE users
+    -> ADD COLUMN age INT(2) AFTER gender;
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+mysql> UPDATE users
+    -> SET age = CURRENT_DATE - date_of_birth;
+Query OK, 47 rows affected (0.00 sec)
+Rows matched: 47  Changed: 47  Warnings: 0
+
+mysql> SELECT name,age from users;
++--------------------------+--------+
+| name                     | age    |
++--------------------------+--------+
+| Tushar Bhardwaj          | 180294 |
+| Siddharth Chaudhary      | 200800 |
+| Naina Singh              | 180295 |
+| Aryan Pratap Singh Tomar | 200294 |
+| Ananya Verma             | 200894 |
+| Rohan Gupta              | 220505 |
+| Priya Mehta              | 210311 |
+| Kunal Singh              | 199998 |
+| Neha Kapoor              | 211007 |
+| Aditya Malhotra          | 220086 |
+| Simran Kaur              | 200602 |
+| Rahul Jain               | 210395 |
+| Pooja Agarwal            | 200706 |
+| Vikas Yadav              | 220214 |
+| Sneha Nair               | 210789 |
+| Amit Patel               | 201097 |
+| Kritika Arora            | 220613 |
+| Suresh Reddy             | 209991 |
+| Nisha Joshi              | 200307 |
+| Arjun Iyer               | 221002 |
+| Ritika Bansal            | 210487 |
+| Manish Chawla            | 200110 |
+| Shreya Sengupta          | 220399 |
+| Nikhil Saxena            | 211108 |
+| Aishwarya Pillai         | 200885 |
+| Deepak Mishra            | 220692 |
+| Isha Khanna              | 210204 |
+| Sanjay Kulkarni          | 200509 |
+| Rhea Dutta               | 220296 |
+| Mohit Bhatia             | 210615 |
+| Kavya Menon              | 200990 |
+| Yash Thakur              | 220012 |
+| Mehul Shah               | 210401 |
+| Tanvi Kulkarni           | 200088 |
+| Akash Pandey             | 220797 |
+| Ritu Malhotra            | 211086 |
+| Varun Arora              | 200594 |
+| Sonal Desai              | 220503 |
+| Harsh Vardhan            | 210314 |
+| Pallavi Joshi            | 200700 |
+| Karan Oberoi             | 220207 |
+| Mitali Roy               | 210998 |
+| Rakesh Sinha             | 200015 |
+| Ankit Verma              | 210591 |
+| Divya Bhatt              | 220908 |
+| Rohini Rao               | 200397 |
+| Keshav Tiwari            | 210102 |
++--------------------------+--------+
+47 rows in set (0.00 sec)
+
+mysql> ALTER TABLE users
+    -> MODIFY COLUMN age age TINYINT(2);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'age TINYINT(2)' at line 2
+mysql> ALTER TABLE users MODIFY COLUMN age TINYINT(2);
+ERROR 1264 (22003): Out of range value for column 'age' at row 1
+mysql> ALTER TABLE users
+    -> DROP COLUMN age;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE users
+    -> ADD COLUMN age TINYINT(2) AFTER gender;
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+mysql> UPDATE users
+    -> SET age = CURRENT_DATE - date_of_birth;
+ERROR 1264 (22003): Out of range value for column 'age' at row 1
+mysql> UPDATE users SET age = ROUND(2,CURRENT_DATE - date_of_birth);
+Query OK, 47 rows affected (0.01 sec)
+Rows matched: 47  Changed: 47  Warnings: 0
+
+mysql> SELECT name,age FROM users;
++--------------------------+------+
+| name                     | age  |
++--------------------------+------+
+| Tushar Bhardwaj          |    2 |
+| Siddharth Chaudhary      |    2 |
+| Naina Singh              |    2 |
+| Aryan Pratap Singh Tomar |    2 |
+| Ananya Verma             |    2 |
+| Rohan Gupta              |    2 |
+| Priya Mehta              |    2 |
+| Kunal Singh              |    2 |
+| Neha Kapoor              |    2 |
+| Aditya Malhotra          |    2 |
+| Simran Kaur              |    2 |
+| Rahul Jain               |    2 |
+| Pooja Agarwal            |    2 |
+| Vikas Yadav              |    2 |
+| Sneha Nair               |    2 |
+| Amit Patel               |    2 |
+| Kritika Arora            |    2 |
+| Suresh Reddy             |    2 |
+| Nisha Joshi              |    2 |
+| Arjun Iyer               |    2 |
+| Ritika Bansal            |    2 |
+| Manish Chawla            |    2 |
+| Shreya Sengupta          |    2 |
+| Nikhil Saxena            |    2 |
+| Aishwarya Pillai         |    2 |
+| Deepak Mishra            |    2 |
+| Isha Khanna              |    2 |
+| Sanjay Kulkarni          |    2 |
+| Rhea Dutta               |    2 |
+| Mohit Bhatia             |    2 |
+| Kavya Menon              |    2 |
+| Yash Thakur              |    2 |
+| Mehul Shah               |    2 |
+| Tanvi Kulkarni           |    2 |
+| Akash Pandey             |    2 |
+| Ritu Malhotra            |    2 |
+| Varun Arora              |    2 |
+| Sonal Desai              |    2 |
+| Harsh Vardhan            |    2 |
+| Pallavi Joshi            |    2 |
+| Karan Oberoi             |    2 |
+| Mitali Roy               |    2 |
+| Rakesh Sinha             |    2 |
+| Ankit Verma              |    2 |
+| Divya Bhatt              |    2 |
+| Rohini Rao               |    2 |
+| Keshav Tiwari            |    2 |
++--------------------------+------+
+47 rows in set (0.00 sec)
+
+mysql> UPDATE users SET age = ROUND(3,CURRENT_DATE - date_of_birth);
+Query OK, 47 rows affected (0.01 sec)
+Rows matched: 47  Changed: 47  Warnings: 0
+
+mysql> SELECT name,age FROM users;
++--------------------------+------+
+| name                     | age  |
++--------------------------+------+
+| Tushar Bhardwaj          |    3 |
+| Siddharth Chaudhary      |    3 |
+| Naina Singh              |    3 |
+| Aryan Pratap Singh Tomar |    3 |
+| Ananya Verma             |    3 |
+| Rohan Gupta              |    3 |
+| Priya Mehta              |    3 |
+| Kunal Singh              |    3 |
+| Neha Kapoor              |    3 |
+| Aditya Malhotra          |    3 |
+| Simran Kaur              |    3 |
+| Rahul Jain               |    3 |
+| Pooja Agarwal            |    3 |
+| Vikas Yadav              |    3 |
+| Sneha Nair               |    3 |
+| Amit Patel               |    3 |
+| Kritika Arora            |    3 |
+| Suresh Reddy             |    3 |
+| Nisha Joshi              |    3 |
+| Arjun Iyer               |    3 |
+| Ritika Bansal            |    3 |
+| Manish Chawla            |    3 |
+| Shreya Sengupta          |    3 |
+| Nikhil Saxena            |    3 |
+| Aishwarya Pillai         |    3 |
+| Deepak Mishra            |    3 |
+| Isha Khanna              |    3 |
+| Sanjay Kulkarni          |    3 |
+| Rhea Dutta               |    3 |
+| Mohit Bhatia             |    3 |
+| Kavya Menon              |    3 |
+| Yash Thakur              |    3 |
+| Mehul Shah               |    3 |
+| Tanvi Kulkarni           |    3 |
+| Akash Pandey             |    3 |
+| Ritu Malhotra            |    3 |
+| Varun Arora              |    3 |
+| Sonal Desai              |    3 |
+| Harsh Vardhan            |    3 |
+| Pallavi Joshi            |    3 |
+| Karan Oberoi             |    3 |
+| Mitali Roy               |    3 |
+| Rakesh Sinha             |    3 |
+| Ankit Verma              |    3 |
+| Divya Bhatt              |    3 |
+| Rohini Rao               |    3 |
+| Keshav Tiwari            |    3 |
++--------------------------+------+
+47 rows in set (0.00 sec)
+
+mysql> UPDATE users 
+    -> SET age = TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE());
+Query OK, 47 rows affected (0.00 sec)
+Rows matched: 47  Changed: 47  Warnings: 0
+
+mysql> SELECT name,age FROM users;
++--------------------------+------+
+| name                     | age  |
++--------------------------+------+
+| Tushar Bhardwaj          |   18 |
+| Siddharth Chaudhary      |   20 |
+| Naina Singh              |   18 |
+| Aryan Pratap Singh Tomar |   20 |
+| Ananya Verma             |   20 |
+| Rohan Gupta              |   22 |
+| Priya Mehta              |   21 |
+| Kunal Singh              |   19 |
+| Neha Kapoor              |   21 |
+| Aditya Malhotra          |   22 |
+| Simran Kaur              |   20 |
+| Rahul Jain               |   21 |
+| Pooja Agarwal            |   20 |
+| Vikas Yadav              |   22 |
+| Sneha Nair               |   21 |
+| Amit Patel               |   20 |
+| Kritika Arora            |   22 |
+| Suresh Reddy             |   20 |
+| Nisha Joshi              |   20 |
+| Arjun Iyer               |   22 |
+| Ritika Bansal            |   21 |
+| Manish Chawla            |   20 |
+| Shreya Sengupta          |   22 |
+| Nikhil Saxena            |   21 |
+| Aishwarya Pillai         |   20 |
+| Deepak Mishra            |   22 |
+| Isha Khanna              |   21 |
+| Sanjay Kulkarni          |   20 |
+| Rhea Dutta               |   22 |
+| Mohit Bhatia             |   21 |
+| Kavya Menon              |   20 |
+| Yash Thakur              |   22 |
+| Mehul Shah               |   21 |
+| Tanvi Kulkarni           |   20 |
+| Akash Pandey             |   22 |
+| Ritu Malhotra            |   21 |
+| Varun Arora              |   20 |
+| Sonal Desai              |   22 |
+| Harsh Vardhan            |   21 |
+| Pallavi Joshi            |   20 |
+| Karan Oberoi             |   22 |
+| Mitali Roy               |   21 |
+| Rakesh Sinha             |   20 |
+| Ankit Verma              |   21 |
+| Divya Bhatt              |   22 |
+| Rohini Rao               |   20 |
+| Keshav Tiwari            |   21 |
++--------------------------+------+
+47 rows in set (0.00 sec)
+
+mysql> SELECT name from users
+    -> WHERE age >= 18;
++--------------------------+
+| name                     |
++--------------------------+
+| Tushar Bhardwaj          |
+| Siddharth Chaudhary      |
+| Naina Singh              |
+| Aryan Pratap Singh Tomar |
+| Ananya Verma             |
+| Rohan Gupta              |
+| Priya Mehta              |
+| Kunal Singh              |
+| Neha Kapoor              |
+| Aditya Malhotra          |
+| Simran Kaur              |
+| Rahul Jain               |
+| Pooja Agarwal            |
+| Vikas Yadav              |
+| Sneha Nair               |
+| Amit Patel               |
+| Kritika Arora            |
+| Suresh Reddy             |
+| Nisha Joshi              |
+| Arjun Iyer               |
+| Ritika Bansal            |
+| Manish Chawla            |
+| Shreya Sengupta          |
+| Nikhil Saxena            |
+| Aishwarya Pillai         |
+| Deepak Mishra            |
+| Isha Khanna              |
+| Sanjay Kulkarni          |
+| Rhea Dutta               |
+| Mohit Bhatia             |
+| Kavya Menon              |
+| Yash Thakur              |
+| Mehul Shah               |
+| Tanvi Kulkarni           |
+| Akash Pandey             |
+| Ritu Malhotra            |
+| Varun Arora              |
+| Sonal Desai              |
+| Harsh Vardhan            |
+| Pallavi Joshi            |
+| Karan Oberoi             |
+| Mitali Roy               |
+| Rakesh Sinha             |
+| Ankit Verma              |
+| Divya Bhatt              |
+| Rohini Rao               |
+| Keshav Tiwari            |
++--------------------------+
+47 rows in set (0.00 sec)
+
+mysql> SELECT name from users WHERE age <= 18;
++-----------------+
+| name            |
++-----------------+
+| Tushar Bhardwaj |
+| Naina Singh     |
++-----------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT name,age,date_of_birth from users
+    -> WHERE age <= 18;
++-----------------+------+---------------+
+| name            | age  | date_of_birth |
++-----------------+------+---------------+
+| Tushar Bhardwaj |   18 | 2007-09-22    |
+| Naina Singh     |   18 | 2007-09-21    |
++-----------------+------+---------------+
+2 rows in set (0.00 sec)
+
+mysql> ALTER TABLE users
+    -> ADD CONSTRAINT chk_age CHECK(age>=18);
+Query OK, 47 rows affected (0.03 sec)
+Records: 47  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE users
+    -> DROP CONSTRAINT unique_id;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE users
+    -> MODIFY COLUMN salary INT AFTER date_of_birth;
+Query OK, 47 rows affected (0.03 sec)
+Records: 47  Duplicates: 0  Warnings: 0
+
+mysql> SELECT COUNT(*) FROM users;
++----------+
+| COUNT(*) |
++----------+
+|       47 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COUNT(name) FROM users
+    -> WHERE gender = 'Female';
++-------------+
+| COUNT(name) |
++-------------+
+|          22 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COUNT(*) FROM users
+    -> WHERE gender = 'other';
++----------+
+| COUNT(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT MIN(salary) as Min_salary, MAX(salary) as Max_salary FROM users;
++------------+------------+
+| Min_salary | Max_salary |
++------------+------------+
+|      30000 |      70000 |
++------------+------------+
+1 row in set (0.04 sec)
+
+mysql> SELECT name, MIN(salary) as Min_salary, MAX(salary) as Max_salary FROM users;
+ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'gisma_sql.users.name'; this is incompatible with sql_mode=only_full_group_by
+mysql> SELECT name, MIN(salary) as Min_salary, MAX(salary) as Max_salary FROM users GROUP BY name;
++--------------------------+------------+------------+
+| name                     | Min_salary | Max_salary |
++--------------------------+------------+------------+
+| Tushar Bhardwaj          |      70000 |      70000 |
+| Siddharth Chaudhary      |      30000 |      30000 |
+| Naina Singh              |      60000 |      60000 |
+| Aryan Pratap Singh Tomar |      30000 |      30000 |
+| Ananya Verma             |      30000 |      30000 |
+| Rohan Gupta              |      60000 |      60000 |
+| Priya Mehta              |      30000 |      30000 |
+| Kunal Singh              |      60000 |      60000 |
+| Neha Kapoor              |      30000 |      30000 |
+| Aditya Malhotra          |      60000 |      60000 |
+| Simran Kaur              |      30000 |      30000 |
+| Rahul Jain               |      60000 |      60000 |
+| Pooja Agarwal            |      30000 |      30000 |
+| Vikas Yadav              |      60000 |      60000 |
+| Sneha Nair               |      30000 |      30000 |
+| Amit Patel               |      60000 |      60000 |
+| Kritika Arora            |      30000 |      30000 |
+| Suresh Reddy             |      60000 |      60000 |
+| Nisha Joshi              |      30000 |      30000 |
+| Arjun Iyer               |      60000 |      60000 |
+| Ritika Bansal            |      30000 |      30000 |
+| Manish Chawla            |      60000 |      60000 |
+| Shreya Sengupta          |      30000 |      30000 |
+| Nikhil Saxena            |      60000 |      60000 |
+| Aishwarya Pillai         |      30000 |      30000 |
+| Deepak Mishra            |      60000 |      60000 |
+| Isha Khanna              |      30000 |      30000 |
+| Sanjay Kulkarni          |      60000 |      60000 |
+| Rhea Dutta               |      30000 |      30000 |
+| Mohit Bhatia             |      60000 |      60000 |
+| Kavya Menon              |      30000 |      30000 |
+| Yash Thakur              |      60000 |      60000 |
+| Mehul Shah               |      30000 |      30000 |
+| Tanvi Kulkarni           |      60000 |      60000 |
+| Akash Pandey             |      30000 |      30000 |
+| Ritu Malhotra            |      60000 |      60000 |
+| Varun Arora              |      30000 |      30000 |
+| Sonal Desai              |      60000 |      60000 |
+| Harsh Vardhan            |      30000 |      30000 |
+| Pallavi Joshi            |      60000 |      60000 |
+| Karan Oberoi             |      30000 |      30000 |
+| Mitali Roy               |      60000 |      60000 |
+| Rakesh Sinha             |      30000 |      30000 |
+| Ankit Verma              |      60000 |      60000 |
+| Divya Bhatt              |      30000 |      30000 |
+| Rohini Rao               |      60000 |      60000 |
+| Keshav Tiwari            |      30000 |      30000 |
++--------------------------+------------+------------+
+47 rows in set (0.00 sec)
+
+mysql> SLECT name FROM users
+    -> WHERE salary = MIN(salary);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SLECT name FROM users
+WHERE salary = MIN(salary)' at line 1
+mysql> SLECT name FROM users WHERE MIN(salary);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SLECT name FROM users WHERE MIN(salary)' at line 1
+mysql> SELECT name FROM users WHERE salary = MIN(salary);
+ERROR 1111 (HY000): Invalid use of group function
+mysql> SELECT name FROM users WHERE MIN(salary);
+ERROR 1111 (HY000): Invalid use of group function
+mysql> SELECT name FROM users WHERE salary = (SELECT MIN(salary) FROM users);
++--------------------------+
+| name                     |
++--------------------------+
+| Siddharth Chaudhary      |
+| Aryan Pratap Singh Tomar |
+| Ananya Verma             |
+| Priya Mehta              |
+| Neha Kapoor              |
+| Simran Kaur              |
+| Pooja Agarwal            |
+| Sneha Nair               |
+| Kritika Arora            |
+| Nisha Joshi              |
+| Ritika Bansal            |
+| Shreya Sengupta          |
+| Aishwarya Pillai         |
+| Isha Khanna              |
+| Rhea Dutta               |
+| Kavya Menon              |
+| Mehul Shah               |
+| Akash Pandey             |
+| Varun Arora              |
+| Harsh Vardhan            |
+| Karan Oberoi             |
+| Rakesh Sinha             |
+| Divya Bhatt              |
+| Keshav Tiwari            |
++--------------------------+
+24 rows in set (0.01 sec)
+
+mysql> SELECT name FROM users WHERE salary = (SELECT MIN(salary) FROM users) LIMIT 1;
++---------------------+
+| name                |
++---------------------+
+| Siddharth Chaudhary |
++---------------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT name, salary as min_sal 
+    -> FROM users
+    -> WHEHE salary = 
+    -> (SELECT MIN(salary) FROM users);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'salary = 
+(SELECT MIN(salary) FROM users)' at line 3
+mysql> SELECT name, salary as min_sal FROM users WHEHE salary =  (SELECT MIN(salary) FROM users);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'salary =  (SELECT MIN(salary) FROM users)' at line 1
+mysql> SELECT name,salary 
+    -> FROM users
+    -> WHERE salary = (SELECT MIN(salary) FROM users);
++--------------------------+--------+
+| name                     | salary |
++--------------------------+--------+
+| Siddharth Chaudhary      |  30000 |
+| Aryan Pratap Singh Tomar |  30000 |
+| Ananya Verma             |  30000 |
+| Priya Mehta              |  30000 |
+| Neha Kapoor              |  30000 |
+| Simran Kaur              |  30000 |
+| Pooja Agarwal            |  30000 |
+| Sneha Nair               |  30000 |
+| Kritika Arora            |  30000 |
+| Nisha Joshi              |  30000 |
+| Ritika Bansal            |  30000 |
+| Shreya Sengupta          |  30000 |
+| Aishwarya Pillai         |  30000 |
+| Isha Khanna              |  30000 |
+| Rhea Dutta               |  30000 |
+| Kavya Menon              |  30000 |
+| Mehul Shah               |  30000 |
+| Akash Pandey             |  30000 |
+| Varun Arora              |  30000 |
+| Harsh Vardhan            |  30000 |
+| Karan Oberoi             |  30000 |
+| Rakesh Sinha             |  30000 |
+| Divya Bhatt              |  30000 |
+| Keshav Tiwari            |  30000 |
++--------------------------+--------+
+24 rows in set (0.00 sec)
+
+mysql> SELECT name,salary  FROM users WHERE salary = (SELECT MIN(salary) FROM users) LIMIT 1,1;
++--------------------------+--------+
+| name                     | salary |
++--------------------------+--------+
+| Aryan Pratap Singh Tomar |  30000 |
++--------------------------+--------+
+1 row in set (0.00 sec)
+
+mysql> SELECT AVG(salary) as Average_payout FROM users;
++----------------+
+| Average_payout |
++----------------+
+|     44893.6170 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SUM(salary) AS combined_sal FROM users
+    -> WHERE name LIKE 'Aryan%' OR 'Sid%';
++--------------+
+| combined_sal |
++--------------+
+|        30000 |
++--------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> SELECT CONCAT(name,'-'), SUM(salary) AS combined_sal FROM users WHERE name LIKE 'Aryan%' OR 'Sid%';
+ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'gisma_sql.users.name'; this is incompatible with sql_mode=only_full_group_by
+mysql> SELECT CONCAT(name,'-') as con_name, SUM(salary) AS combined_sal FROM users WHERE name LIKE 'Aryan%' OR 'Sid%';
+ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'gisma_sql.users.name'; this is incompatible with sql_mode=only_full_group_by
+mysql> SELECT CONCAT(name,'-') as con_name, SUM(salary) AS combined_sal FROM users WHERE name LIKE 'Aryan%' OR 'Sid%' GROUP BY name;
++---------------------------+--------------+
+| con_name                  | combined_sal |
++---------------------------+--------------+
+| Aryan Pratap Singh Tomar- |        30000 |
++---------------------------+--------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> SELECT CONCAT(name,'-',name) as con_name, SUM(salary) AS combined_sal FROM users WHERE name LIKE 'Aryan%' OR 'Sid%' GROUP BY name;
++---------------------------------------------------+--------------+
+| con_name                                          | combined_sal |
++---------------------------------------------------+--------------+
+| Aryan Pratap Singh Tomar-Aryan Pratap Singh Tomar |        30000 |
++---------------------------------------------------+--------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> SELECT gender, AVG(salary) AS avg_sal
+    -> FROM users
+    -> GROUP BY gender
+    -> ;
++--------+------------+
+| gender | avg_sal    |
++--------+------------+
+| Male   | 50416.6667 |
+| other  | 30000.0000 |
+| Female | 39545.4545 |
++--------+------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT CONCAT(name), SUM(salary) 
+    -> FROM users
+    -> WHERE name LIKE 'Aryan%' OR 'SID%' GROUP BY salary;
+ERROR 1055 (42000): Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'gisma_sql.users.name' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+mysql> SELECT CONCAT(name), SUM(salary) FROM users WHERE name LIKE 'Aryan%' OR 'SID%' GROUP BY name;
++--------------------------+-------------+
+| CONCAT(name)             | SUM(salary) |
++--------------------------+-------------+
+| Aryan Pratap Singh Tomar |       30000 |
++--------------------------+-------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> SELECT CONCAT(name+'-') FROM users,
+    -> SELECT SUM(salary) as comb_sal FROM users
+    -> WHERE name LIKE 'Aryan%' OR 'Sid%';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT SUM(salary) as comb_sal FROM users
+WHERE name LIKE 'Aryan%' OR 'Sid%'' at line 2
+mysql> SELECT LOWER(name) 
+    -> FROM users
+    -> WHERE id BETWEEN 1 AND 100;
++--------------------------+
+| LOWER(name)              |
++--------------------------+
+| tushar bhardwaj          |
+| siddharth chaudhary      |
+| naina singh              |
+| aryan pratap singh tomar |
+| ananya verma             |
+| rohan gupta              |
+| priya mehta              |
+| kunal singh              |
+| neha kapoor              |
+| aditya malhotra          |
+| simran kaur              |
++--------------------------+
+11 rows in set (0.00 sec)
+
+mysql> SELECT CONCAT(name+'-->'+email) 
+    -> AS details
+    -> FROM users;
+ERROR 1054 (42S22): Unknown column 'email' in 'field list'
+mysql> SELECT CONCAT(name+'-->'+email_id) AS details FROM users;
++---------+
+| details |
++---------+
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
+| 0       |
++---------+
+47 rows in set, 141 warnings (0.00 sec)
+
+mysql> SELECT CONCAT(name,'-->',email_id) AS details FROM users;
++-------------------------------------------------+
+| details                                         |
++-------------------------------------------------+
+| Tushar Bhardwaj-->tusharrbhardwaj@gmail.com     |
+| Siddharth Chaudhary-->amarakiyoplay@gmail.com   |
+| Naina Singh-->nain@gmail.com                    |
+| Aryan Pratap Singh Tomar-->tomary.yan@gmail.com |
+| Ananya Verma-->ananya.verma@gmail.com           |
+| Rohan Gupta-->rohan.gupta@gmail.com             |
+| Priya Mehta-->priya.mehta@gmail.com             |
+| Kunal Singh-->kunal.singh@gmail.com             |
+| Neha Kapoor-->neha.kapoor@gmail.com             |
+| Aditya Malhotra-->aditya.malhotra@gmail.com     |
+| Simran Kaur-->simran.kaur@gmail.com             |
+| Rahul Jain-->rahul.jain@gmail.com               |
+| Pooja Agarwal-->pooja.agarwal@gmail.com         |
+| Vikas Yadav-->vikas.yadav@gmail.com             |
+| Sneha Nair-->sneha.nair@gmail.com               |
+| Amit Patel-->amit.patel@gmail.com               |
+| Kritika Arora-->kritika.arora@gmail.com         |
+| Suresh Reddy-->suresh.reddy@gmail.com           |
+| Nisha Joshi-->nisha.joshi@gmail.com             |
+| Arjun Iyer-->arjun.iyer@gmail.com               |
+| Ritika Bansal-->ritika.bansal@gmail.com         |
+| Manish Chawla-->manish.chawla@gmail.com         |
+| Shreya Sengupta-->shreya.s@gmail.com            |
+| Nikhil Saxena-->nikhil.saxena@gmail.com         |
+| Aishwarya Pillai-->aishwarya.p@gmail.com        |
+| Deepak Mishra-->deepak.mishra@gmail.com         |
+| Isha Khanna-->isha.khanna@gmail.com             |
+| Sanjay Kulkarni-->sanjay.k@gmail.com            |
+| Rhea Dutta-->rhea.dutta@gmail.com               |
+| Mohit Bhatia-->mohit.bhatia@gmail.com           |
+| Kavya Menon-->kavya.menon@gmail.com             |
+| Yash Thakur-->yash.thakur@gmail.com             |
+| Mehul Shah-->mehul.shah@gmail.com               |
+| Tanvi Kulkarni-->tanvi.k@gmail.com              |
+| Akash Pandey-->akash.pandey@gmail.com           |
+| Ritu Malhotra-->ritu.m@gmail.com                |
+| Varun Arora-->varun.arora@gmail.com             |
+| Sonal Desai-->sonal.desai@gmail.com             |
+| Harsh Vardhan-->harsh.v@gmail.com               |
+| Pallavi Joshi-->pallavi.j@gmail.com             |
+| Karan Oberoi-->karan.oberoi@gmail.com           |
+| Mitali Roy-->mitali.roy@gmail.com               |
+| Rakesh Sinha-->rakesh.sinha@gmail.com           |
+| Ankit Verma-->ankit.verma@gmail.com             |
+| Divya Bhatt-->divya.bhatt@gmail.com             |
+| Rohini Rao-->rohini.rao@gmail.com               |
+| Keshav Tiwari-->keshav.tiwari@gmail.com         |
++-------------------------------------------------+
+47 rows in set (0.00 sec)
+
+mysql> SELECT NOW();
++---------------------+
+| NOW()               |
++---------------------+
+| 2025-12-16 21:56:34 |
++---------------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT DATEDIFF(CURDATE(),date_of_birth)
+    -> WHERE id = 1;
+ERROR 1054 (42S22): Unknown column 'date_of_birth' in 'field list'
+mysql> SELECT DATEDIFF(CURDATE(),date_of_birth) as days WHERE id = 1;
+ERROR 1054 (42S22): Unknown column 'date_of_birth' in 'field list'
+mysql> SELECT DATEDIFF(CURDATE(),date_of_birth) as days
+    -> FROM users
+    -> WHERE id = 1;
++------+
+| days |
++------+
+| 6660 |
++------+
+1 row in set (0.00 sec)
+
+mysql> SELECT TIMESTAMPDIFF(CURDATE(),date_of_birth) as days FROM users WHERE id = 1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CURDATE(),date_of_birth) as days FROM users WHERE id = 1' at line 1
+mysql> SELECT TIMESTAMPDIFF(YEAR,date_of_birth,CURDATE()) as days FROM users WHERE id = 1;
++------+
+| days |
++------+
+|   18 |
++------+
+1 row in set (0.01 sec)
+
+mysql> SELECT gender, AVG(salary) AS avg_sal
+    ->     -> FROM users
+    ->     
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-> FROM users' at line 2
+mysql> SELECT gender, AVG(salary) AS avg_sal FROM users GROUP BY gender;
++--------+------------+
+| gender | avg_sal    |
++--------+------------+
+| Male   | 50416.6667 |
+| other  | 30000.0000 |
+| Female | 39545.4545 |
++--------+------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT gender, ROUND(AVG(salary,2) AS avg_sal FROM users GROUP BY gender;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',2) AS avg_sal FROM users GROUP BY gender' at line 1
+mysql> SELECT age, ROUND(AVG(salary),2)
+    -> FROM users
+    -> GROUP BY age;
++------+----------------------+
+| age  | ROUND(AVG(salary),2) |
++------+----------------------+
+|   18 |             65000.00 |
+|   20 |             42352.94 |
+|   22 |             46153.85 |
+|   21 |             42857.14 |
+|   19 |             60000.00 |
++------+----------------------+
+5 rows in set (0.01 sec)
+
+mysql> SELECT gender, ROUND(AVG(salary),2) FROM users GROUP BY gender;
++--------+----------------------+
+| gender | ROUND(AVG(salary),2) |
++--------+----------------------+
+| Male   |             50416.67 |
+| other  |             30000.00 |
+| Female |             39545.45 |
++--------+----------------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT id, MOD(id,2) AS remainder FROM users;
++-----+-----------+
+| id  | remainder |
++-----+-----------+
+|  99 |         1 |
+| 114 |         0 |
+| 124 |         0 |
+|   2 |         0 |
+| 105 |         1 |
+|  94 |         0 |
+| 133 |         1 |
+| 109 |         1 |
+| 115 |         1 |
+| 134 |         0 |
+| 128 |         0 |
+| 116 |         0 |
+| 130 |         0 |
+| 120 |         0 |
+| 136 |         0 |
+| 106 |         0 |
+|  97 |         1 |
+| 111 |         1 |
+| 122 |         0 |
+| 131 |         1 |
+| 119 |         1 |
+|   3 |         1 |
+|  98 |         0 |
+| 113 |         1 |
+| 108 |         0 |
+| 129 |         1 |
+| 102 |         0 |
+|  96 |         0 |
+| 101 |         1 |
+| 132 |         0 |
+| 118 |         0 |
+| 110 |         0 |
+| 125 |         1 |
+|  95 |         1 |
+| 135 |         1 |
+| 117 |         1 |
+| 112 |         0 |
+| 100 |         0 |
+| 104 |         0 |
+| 127 |         1 |
+| 107 |         1 |
+| 123 |         1 |
+|   4 |         0 |
+|   1 |         1 |
+| 126 |         0 |
+| 103 |         1 |
+| 121 |         1 |
++-----+-----------+
+47 rows in set (0.01 sec)
+
+mysql> SELECT name,gender,
+    -> IF(gender = 'Female', 'Yes', 'NO') AS is_female
+    -> FROM users;
++--------------------------+--------+-----------+
+| name                     | gender | is_female |
++--------------------------+--------+-----------+
+| Tushar Bhardwaj          | Male   | NO        |
+| Siddharth Chaudhary      | other  | NO        |
+| Naina Singh              | Female | Yes       |
+| Aryan Pratap Singh Tomar | Male   | NO        |
+| Ananya Verma             | Female | Yes       |
+| Rohan Gupta              | Male   | NO        |
+| Priya Mehta              | Female | Yes       |
+| Kunal Singh              | Male   | NO        |
+| Neha Kapoor              | Female | Yes       |
+| Aditya Malhotra          | Male   | NO        |
+| Simran Kaur              | Female | Yes       |
+| Rahul Jain               | Male   | NO        |
+| Pooja Agarwal            | Female | Yes       |
+| Vikas Yadav              | Male   | NO        |
+| Sneha Nair               | Female | Yes       |
+| Amit Patel               | Male   | NO        |
+| Kritika Arora            | Female | Yes       |
+| Suresh Reddy             | Male   | NO        |
+| Nisha Joshi              | Female | Yes       |
+| Arjun Iyer               | Male   | NO        |
+| Ritika Bansal            | Female | Yes       |
+| Manish Chawla            | Male   | NO        |
+| Shreya Sengupta          | Female | Yes       |
+| Nikhil Saxena            | Male   | NO        |
+| Aishwarya Pillai         | Female | Yes       |
+| Deepak Mishra            | Male   | NO        |
+| Isha Khanna              | Female | Yes       |
+| Sanjay Kulkarni          | Male   | NO        |
+| Rhea Dutta               | Female | Yes       |
+| Mohit Bhatia             | Male   | NO        |
+| Kavya Menon              | Female | Yes       |
+| Yash Thakur              | Male   | NO        |
+| Mehul Shah               | Male   | NO        |
+| Tanvi Kulkarni           | Female | Yes       |
+| Akash Pandey             | Male   | NO        |
+| Ritu Malhotra            | Female | Yes       |
+| Varun Arora              | Male   | NO        |
+| Sonal Desai              | Female | Yes       |
+| Harsh Vardhan            | Male   | NO        |
+| Pallavi Joshi            | Female | Yes       |
+| Karan Oberoi             | Male   | NO        |
+| Mitali Roy               | Female | Yes       |
+| Rakesh Sinha             | Male   | NO        |
+| Ankit Verma              | Male   | NO        |
+| Divya Bhatt              | Female | Yes       |
+| Rohini Rao               | Female | Yes       |
+| Keshav Tiwari            | Male   | NO        |
++--------------------------+--------+-----------+
+47 rows in set (0.00 sec)
+
+mysql> SELECT name, salary
+    -> IF(salary > 30000,'HIGH','LOW') AS sal_verdict
+    -> FROM users
+    -> WHERE salary>30000;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF(salary > 30000,'HIGH','LOW') AS sal_verdict
+FROM users
+WHERE salary>30000' at line 2
+mysql> SELECT name, salary IF(salary > 30000,'HIGH','LOW') AS sal_verdict FROM users;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IF(salary > 30000,'HIGH','LOW') AS sal_verdict FROM users' at line 1
+mysql> SELECT name, salary, IF(salary > 30000,'HIGH','LOW') AS sal_verdict FROM users;
++--------------------------+--------+-------------+
+| name                     | salary | sal_verdict |
++--------------------------+--------+-------------+
+| Tushar Bhardwaj          |  70000 | HIGH        |
+| Siddharth Chaudhary      |  30000 | LOW         |
+| Naina Singh              |  60000 | HIGH        |
+| Aryan Pratap Singh Tomar |  30000 | LOW         |
+| Ananya Verma             |  30000 | LOW         |
+| Rohan Gupta              |  60000 | HIGH        |
+| Priya Mehta              |  30000 | LOW         |
+| Kunal Singh              |  60000 | HIGH        |
+| Neha Kapoor              |  30000 | LOW         |
+| Aditya Malhotra          |  60000 | HIGH        |
+| Simran Kaur              |  30000 | LOW         |
+| Rahul Jain               |  60000 | HIGH        |
+| Pooja Agarwal            |  30000 | LOW         |
+| Vikas Yadav              |  60000 | HIGH        |
+| Sneha Nair               |  30000 | LOW         |
+| Amit Patel               |  60000 | HIGH        |
+| Kritika Arora            |  30000 | LOW         |
+| Suresh Reddy             |  60000 | HIGH        |
+| Nisha Joshi              |  30000 | LOW         |
+| Arjun Iyer               |  60000 | HIGH        |
+| Ritika Bansal            |  30000 | LOW         |
+| Manish Chawla            |  60000 | HIGH        |
+| Shreya Sengupta          |  30000 | LOW         |
+| Nikhil Saxena            |  60000 | HIGH        |
+| Aishwarya Pillai         |  30000 | LOW         |
+| Deepak Mishra            |  60000 | HIGH        |
+| Isha Khanna              |  30000 | LOW         |
+| Sanjay Kulkarni          |  60000 | HIGH        |
+| Rhea Dutta               |  30000 | LOW         |
+| Mohit Bhatia             |  60000 | HIGH        |
+| Kavya Menon              |  30000 | LOW         |
+| Yash Thakur              |  60000 | HIGH        |
+| Mehul Shah               |  30000 | LOW         |
+| Tanvi Kulkarni           |  60000 | HIGH        |
+| Akash Pandey             |  30000 | LOW         |
+| Ritu Malhotra            |  60000 | HIGH        |
+| Varun Arora              |  30000 | LOW         |
+| Sonal Desai              |  60000 | HIGH        |
+| Harsh Vardhan            |  30000 | LOW         |
+| Pallavi Joshi            |  60000 | HIGH        |
+| Karan Oberoi             |  30000 | LOW         |
+| Mitali Roy               |  60000 | HIGH        |
+| Rakesh Sinha             |  30000 | LOW         |
+| Ankit Verma              |  60000 | HIGH        |
+| Divya Bhatt              |  30000 | LOW         |
+| Rohini Rao               |  60000 | HIGH        |
+| Keshav Tiwari            |  30000 | LOW         |
++--------------------------+--------+-------------+
+47 rows in set (0.00 sec)
+
+mysql> ALTER TABLE users
+    -> ADD COLUMN salary_composition VARCHAR(5)
+    -> AFTER salary;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> UPDATE users
+    -> SET salary_composition = 'HIGH'
+    -> WHERE salary>30000;
+Query OK, 23 rows affected (0.01 sec)
+Rows matched: 23  Changed: 23  Warnings: 0
+
+mysql> UPDATE users SET salary_composition = 'LOW' WHERE salary_composition IS NULL;
+Query OK, 24 rows affected (0.01 sec)
+Rows matched: 24  Changed: 24  Warnings: 0
+
+mysql> SELECT name,salary_composition as salaryy FROM users;
++--------------------------+---------+
+| name                     | salaryy |
++--------------------------+---------+
+| Tushar Bhardwaj          | HIGH    |
+| Siddharth Chaudhary      | LOW     |
+| Naina Singh              | HIGH    |
+| Aryan Pratap Singh Tomar | LOW     |
+| Ananya Verma             | LOW     |
+| Rohan Gupta              | HIGH    |
+| Priya Mehta              | LOW     |
+| Kunal Singh              | HIGH    |
+| Neha Kapoor              | LOW     |
+| Aditya Malhotra          | HIGH    |
+| Simran Kaur              | LOW     |
+| Rahul Jain               | HIGH    |
+| Pooja Agarwal            | LOW     |
+| Vikas Yadav              | HIGH    |
+| Sneha Nair               | LOW     |
+| Amit Patel               | HIGH    |
+| Kritika Arora            | LOW     |
+| Suresh Reddy             | HIGH    |
+| Nisha Joshi              | LOW     |
+| Arjun Iyer               | HIGH    |
+| Ritika Bansal            | LOW     |
+| Manish Chawla            | HIGH    |
+| Shreya Sengupta          | LOW     |
+| Nikhil Saxena            | HIGH    |
+| Aishwarya Pillai         | LOW     |
+| Deepak Mishra            | HIGH    |
+| Isha Khanna              | LOW     |
+| Sanjay Kulkarni          | HIGH    |
+| Rhea Dutta               | LOW     |
+| Mohit Bhatia             | HIGH    |
+| Kavya Menon              | LOW     |
+| Yash Thakur              | HIGH    |
+| Mehul Shah               | LOW     |
+| Tanvi Kulkarni           | HIGH    |
+| Akash Pandey             | LOW     |
+| Ritu Malhotra            | HIGH    |
+| Varun Arora              | LOW     |
+| Sonal Desai              | HIGH    |
+| Harsh Vardhan            | LOW     |
+| Pallavi Joshi            | HIGH    |
+| Karan Oberoi             | LOW     |
+| Mitali Roy               | HIGH    |
+| Rakesh Sinha             | LOW     |
+| Ankit Verma              | HIGH    |
+| Divya Bhatt              | LOW     |
+| Rohini Rao               | HIGH    |
+| Keshav Tiwari            | LOW     |
++--------------------------+---------+
+47 rows in set (0.00 sec)
+
+mysql> SET AUTOMCOMMIT = 0;
+ERROR 1193 (HY000): Unknown system variable 'AUTOMCOMMIT'
+mysql> SET automcommit = 0;
+ERROR 1193 (HY000): Unknown system variable 'automcommit'
+mysql> SET autocommit = 0;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>      
